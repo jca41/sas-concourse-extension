@@ -1,0 +1,1521 @@
+17:09:57selected worker: worker-CZ293605B1-d216-c1n2-191-11
+17:10:23Running commands from peacock-web-core utils
+17:10:23Starting Setup
+17:10:23Setup Branch
+17:10:23Setup Version
+17:10:23Setup Build Id
+17:10:23Showing ENV Info
+17:10:23BUILD_ID: mock-ssr-functional-basket-be-errors-fix-c2c4651
+17:10:23BRANCH_NAME: "basket-be-errors-fix"
+17:10:23VERSION: c2c4651
+17:10:23SAS_CYPRESS_ENV: dev
+17:10:23SAS_CYPRESS_PROPOSITION: 
+17:10:23SAS_CYPRESS_TASK_NUMBER: 1
+17:10:23SAS_CYPRESS_TOTAL_TASKS: 3
+17:10:23LIVE: 
+17:10:23Setup Cypress
+17:10:2525h
+17:10:3525hSetup Hosts
+17:10:36cp: cannot stat 'bundle/dist': No such file or directory
+17:10:36yarn run v1.22.19                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+17:10:36$ NODE_OPTIONS=--max_old_space_size=3800 yarn ci:config --provider=mock --env=dev && SILENCE_LOGS=true BUILD_TYPE=next PROPOSITION=mock ott-sas-web-scripts next-feature --provider=mock --env=dev '--testCmd=SAS_CYPRESS_SSR=true yarn parallelcypress:run --ci-build-id mock-ssr-functional-basket-be-errors-fix-c2c4651 --spec "cypress/integration/*.feature" --env TAGS="@feature and not @skip"'                                                                                                             
+17:10:37$ ott-sas-web-scripts config-map-generator --provider=mock --env=dev                                                                                                                                                                                                                                                                                                                                                                                                                                               
+17:10:40Browserslist: caniuse-lite is outdated. Please run:
+17:10:40  npx update-browserslist-db@latest
+17:10:40  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+17:10:441: starting server using command "NODE_CONFIG_ENV=dev PROVIDER=mock ENV=dev ts-node cypress/test-server.ts"
+17:10:44and when url "[ 'https-get://local.mock.sky:9999/health-check' ]" is responding with HTTP status code 200
+17:10:44WAIT_ON_TIMEOUT is set to 600000
+17:10:44running tests using command "CYPRESS_BASE_URL=https://local.mock.sky:9999 SAS_CYPRESS_SSR=true yarn parallelcypress:run --ci-build-id mock-ssr-functional-basket-be-errors-fix-c2c4651 --spec "cypress/integration/*.feature" --env TAGS="@feature and not @skip""
+17:10:44
+17:10:46Browserslist: caniuse-lite is outdated. Please run:
+17:10:46  npx update-browserslist-db@latest
+17:10:46  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+17:10:49warn  - You have enabled experimental feature (skipTrailingSlashRedirect) in next.config.js.
+17:10:49warn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
+17:10:49
+17:10:50Browserslist: caniuse-lite is outdated. Please run:
+17:10:50  npx browserslist@latest --update-db
+17:10:50  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+17:10:50info  - Disabled SWC as replacement for Babel because of custom Babel configuration "babel.config.js" https://nextjs.org/docs/messages/swc-disabled
+17:10:50info  - automatically enabled Fast Refresh for 1 custom loader
+17:10:50info  - Using external babel configuration from /tmp/build/1624bf0d/project/babel.config.js
+17:11:18Browserslist: caniuse-lite is outdated. Please run:
+17:11:18  npx update-browserslist-db@latest
+17:11:18  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+17:11:43event - compiled client and server successfully in 53.2s (4708 modules)
+17:11:43Attention: Next.js now collects completely anonymous telemetry regarding usage.
+17:11:43This information is used to shape Next.js' roadmap and prioritize features.
+17:11:43You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+17:11:43https://nextjs.org/telemetry
+17:11:43
+17:11:44>>> MSW Server Ready
+17:11:44>>> Next Server Ready on https://local.mock.sky:9999
+17:11:44$ yarn cypress-cloud run --browser chrome --parallel --record --key nokey --tag $(cat release.txt) --ci-build-id mock-ssr-functional-basket-be-errors-fix-c2c4651 --spec 'cypress/integration/*.feature' --env 'TAGS=@feature and not @skip'                                                                                                                                                                                                                                                                       
+17:11:45$ /tmp/build/1624bf0d/project/node_modules/.bin/cypress-cloud run --browser chrome --parallel --record --key nokey --tag basket-be-errors-fix --ci-build-id mock-ssr-functional-basket-be-errors-fix-c2c4651 --spec 'cypress/integration/*.feature' --env 'TAGS=@feature and not @skip'                                                                                                                                                                                                                            
+17:11:46Using config file: 'file:///tmp/build/1624bf0d/project/currents.config.js'
+17:11:46
+17:11:46Copyright (C) 2023 Currents Software Inc https://currents.dev
+17:11:46This is free software, and you are welcome to redistribute it under certain
+17:11:46conditions. This program comes with no warranty. Parts of this program are MIT
+17:11:46licensed. Refer to the license for details
+17:11:46https://github.com/currents-dev/cypress-cloud/blob/main/LICENSE.md
+17:11:46
+17:11:54Discovered 42 spec files
+17:11:54Tags: basket-be-errors-fix; Group: false; Parallel: true; Batch Size: 3
+17:11:54Connecting to cloud orchestration service...
+17:11:55🎥 Run URL: https://sorry-cypress-dashboard.tools.cosmic.sky/run/1b2e6b507b6cdbb7d3c5ddbff29de87a
+17:11:55
+17:11:55====================================================================================================
+17:11:55
+17:11:55Running: cypress/integration/apple-pay.feature (2/42)
+17:11:56[1073:1220/171156.653926:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:12:01
+17:12:01====================================================================================================
+17:12:01
+17:12:01  (Run Starting)
+17:12:01
+17:12:01  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:12:01  │ Cypress:        11.2.0                                                                         │
+17:12:01  │ Browser:        Chrome 116 (headless)                                                          │
+17:12:01  │ Node Version:   v18.17.0 (/usr/local/bin/node)                                                 │
+17:12:01  │ Specs:          1 found (apple-pay.feature)                                                    │
+17:12:01  │ Searched:       cypress/integration/apple-pay.feature                                          │
+17:12:01  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:12:01
+17:12:01
+17:12:01────────────────────────────────────────────────────────────────────────────────────────────────────
+17:12:01                                                                                                    
+17:12:01  Running:  apple-pay.feature                                                               (1 of 1)
+17:12:16Browserslist: caniuse-lite is outdated. Please run:
+17:12:16  npx update-browserslist-db@latest
+17:12:16  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+17:12:35
+17:12:35
+17:12:35  Apple Pay
+17:12:35wait  - compiling /[...slug] (client and server)...
+17:12:47warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:12:47Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:13:05    ✓ Existing Customer Upgrade Plan (30059ms)
+17:13:14    ✓ Existing Customer Update Payment Details (8968ms)
+17:13:14
+17:13:14
+17:13:14  2 passing (39s)
+17:13:14
+17:13:14
+17:13:14  (Results)
+17:13:14
+17:13:14  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:13:14  │ Tests:        2                                                                                │
+17:13:14  │ Passing:      2                                                                                │
+17:13:14  │ Failing:      0                                                                                │
+17:13:14  │ Pending:      0                                                                                │
+17:13:14  │ Skipped:      0                                                                                │
+17:13:14  │ Screenshots:  0                                                                                │
+17:13:14  │ Video:        false                                                                            │
+17:13:14  │ Duration:     39 seconds                                                                       │
+17:13:14  │ Spec Ran:     apple-pay.feature                                                                │
+17:13:14  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:13:14
+17:13:14
+17:13:14====================================================================================================
+17:13:14
+17:13:14  (Run Finished)
+17:13:14
+17:13:14
+17:13:14       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+17:13:14  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:13:14  │ ✔  apple-pay.feature                        00:39        2        2        -        -        - │
+17:13:14  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:13:14    ✔  All specs passed!                        00:39        2        2        -        -        -  
+17:13:14
+17:13:14
+17:13:14  Reporting results and artifacts in background...  
+17:13:14
+17:13:14
+17:13:14====================================================================================================
+17:13:14
+17:13:14Running: cypress/integration/d2c-basket-errors.feature (5/42)
+17:13:16[1670:1220/171316.017957:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:13:21
+17:13:21====================================================================================================
+17:13:21
+17:13:21  (Run Starting)
+17:13:21
+17:13:21  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:13:21  │ Cypress:        11.2.0                                                                         │
+17:13:21  │ Browser:        Chrome 116 (headless)                                                          │
+17:13:21  │ Node Version:   v18.17.0 (/usr/local/bin/node)                                                 │
+17:13:21  │ Specs:          1 found (d2c-basket-errors.feature)                                            │
+17:13:21  │ Searched:       cypress/integration/d2c-basket-errors.feature                                  │
+17:13:21  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:13:21
+17:13:21
+17:13:21────────────────────────────────────────────────────────────────────────────────────────────────────
+17:13:21                                                                                                    
+17:13:21  Running:  d2c-basket-errors.feature                                                       (1 of 1)
+17:13:35Browserslist: caniuse-lite is outdated. Please run:
+17:13:35  npx update-browserslist-db@latest
+17:13:35  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+17:13:54
+17:13:54
+17:13:55  D2C Sign Up - Handle Basket Errors
+17:14:04    ✓ New customer goes to sign up with no products when SSR is disabled (example #1) (9183ms)
+17:14:04warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:14:04Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:14:04wait  - compiling /__new__/checkout (client and server)...
+17:14:06warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:14:06Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:14:14Warning: Failed prop type: Invalid prop `schema[0]` supplied to `DynamicForm`, expected one of type [string].
+17:14:14    at DynamicForm (webpack-internal:///./node_modules/@sky-uk-ott/atlas-form-builder/es/dynamic-form-component.js:76:5)
+17:14:14    at Form (/tmp/build/1624bf0d/project/node_modules/redux-form/lib/createReduxForm.js:150:41)
+17:14:14    at ConnectFunction (/tmp/build/1624bf0d/project/node_modules/react-redux/lib/components/connectAdvanced.js:235:41)
+17:14:14    at forwardConnectRef
+17:14:14    at ReduxForm (/tmp/build/1624bf0d/project/node_modules/redux-form/lib/createReduxForm.js:890:43)
+17:14:14    at Hoc (/tmp/build/1624bf0d/project/node_modules/redux-form/lib/ReduxFormContext.js:39:31)
+17:14:14    at ReduxForm
+17:14:14    at div
+17:14:14    at FirstPartyDataForm (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-identity/lib/modules/sign-up/components/first-party-data-form.js:17:3)
+17:14:14    at I (/tmp/build/1624bf0d/project/node_modules/styled-components/src/models/StyledComponent.js:174:44)
+17:14:14    at DataCollectionForm (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/sign-up/first-party-data-collection/form.js:17:84)
+17:14:14    at div
+17:14:14    at I (/tmp/build/1624bf0d/project/node_modules/styled-components/src/models/StyledComponent.js:174:44)
+17:14:14    at SignUpFormWrapper (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/sign-up/sign-up-form/sign-up-form-wrapper.js:56:3)
+17:14:14    at div
+17:14:14    at I (/tmp/build/1624bf0d/project/node_modules/styled-components/src/models/StyledComponent.js:174:44)
+17:14:14    at Pod (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/components/pod/pod.js:24:5)
+17:14:14    at SignUpPod (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/sign-up/sign-up-pod.js:56:3)
+17:14:14    at D2CSignUpPage (webpack-internal:///./src/modules/d2c-sign-up/d2c-sign-up/d2c-sign-up-page.tsx:24:3)
+17:14:14    at TransitionAnimationNoContainer (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/components/transition/transition.js:12:3)
+17:14:14    at I (/tmp/build/1624bf0d/project/node_modules/styled-components/src/models/StyledComponent.js:174:44)
+17:14:14    at Transition (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/components/transition/transition.js:19:3)
+17:14:14    at TransitionContainer (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/components/transition/transition-container.js:13:3)
+17:14:14    at div
+17:14:14    at I (/tmp/build/1624bf0d/project/node_modules/styled-components/src/models/StyledComponent.js:174:44)
+17:14:14    at div
+17:14:14    at I (/tmp/build/1624bf0d/project/node_modules/styled-components/src/models/StyledComponent.js:174:44)
+17:14:14    at Row (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/layout/row.js:17:3)
+17:14:14    at PodWithBasketLayout (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/layouts/pod-with-basket-layout/pod-with-basket-layout.js:15:3)
+17:14:14    at D2cCheckoutLayout (webpack-internal:///./src/modules/d2c-sign-up/layouts/d2c-checkout-layout.tsx:26:3)
+17:14:14    at CheckoutPage (webpack-internal:///./pages/__new__/checkout/index.tsx:61:90)
+17:14:14    at PeacockErrorBoundary (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/layout/peacock-error-boundary.js:18:5)
+17:14:14    at main
+17:14:14    at I (/tmp/build/1624bf0d/project/node_modules/styled-components/src/models/StyledComponent.js:174:44)
+17:14:14    at div
+17:14:14    at I (/tmp/build/1624bf0d/project/node_modules/styled-components/src/models/StyledComponent.js:174:44)
+17:14:14    at eval (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/layout/layout.js:29:3)
+17:14:14    at exports.ThemeProvider (/tmp/build/1624bf0d/project/node_modules/styled-components/src/models/ThemeProvider.js:48:22)
+17:14:14    at ThemeProvider (webpack-internal:///./node_modules/@sky-uk-ott/peacock-toolkit/lib/provider/themeProvider.js:65:5)
+17:14:14    at PeacockLayoutContainer (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/layout/gql-container.js:26:3)
+17:14:14    at PeacockRoot (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/layout/peacock-root.js:23:3)
+17:14:14    at IsSignedInWrapper (webpack-internal:///./src/modules/sign-in/is-signed-in-wrapper.tsx:18:3)
+17:14:14    at BaseApp (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-web-core/lib/pages/_app.js:20:3)
+17:14:14    at Provider (/tmp/build/1624bf0d/project/node_modules/react-redux/lib/components/Provider.js:21:20)
+17:14:14    at ApolloProvider (/tmp/build/1624bf0d/project/node_modules/@apollo/client/react/context/ApolloProvider.js:5:21)
+17:14:14    at AppComponent (webpack-internal:///./pages/_app.tsx:62:3)
+17:14:14    at ae (/tmp/build/1624bf0d/project/node_modules/styled-components/src/models/StyleSheetManager.js:34:48)
+17:14:14    at StyleRegistry (/tmp/build/1624bf0d/project/node_modules/styled-jsx/dist/index/index.js:448:36)
+17:14:14    at AppContainer (/tmp/build/1624bf0d/project/node_modules/next/server/render.tsx:624:27)
+17:14:14    at AppContainerWithIsomorphicFiberStructure (/tmp/build/1624bf0d/project/node_modules/next/server/render.tsx:662:11)
+17:14:14    at div
+17:14:14    at Body (/tmp/build/1624bf0d/project/node_modules/next/server/render.tsx:1096:19)
+17:14:24    ✓ New customer goes to sign up with no products when SSR is enabled (example #2) (20456ms)
+17:14:32    ✓ New customer goes to sign up with basket error when SSR is disabled (example #1) (7535ms)
+17:14:40    ✓ New customer goes to sign up with basket error when SSR is enabled (example #2) (7902ms)
+17:14:47    ✓ New customer goes to sign up with basket warning when SSR is disabled (example #1) (7182ms)
+17:14:55    ✓ New customer goes to sign up with basket warning when SSR is enabled (example #2) (8362ms)
+17:15:03    ✓ New customer goes to sign up with basket warning - CATS_WARN_301 when SSR is disabled (example #1) (7428ms)
+17:15:11    ✓ New customer goes to sign up with basket warning - CATS_WARN_301 when SSR is enabled (example #2) (8016ms)
+17:15:18    ✓ Signed in customer lands on checkout with no products when SSR is disabled (example #1) (7197ms)
+17:15:26    ✓ Signed in customer lands on checkout with no products when SSR is enabled (example #2) (7837ms)
+17:15:33    ✓ Signed in customer lands on checkout with basket error when SSR is disabled (example #1) (7249ms)
+17:15:41    ✓ Signed in customer lands on checkout with basket error when SSR is enabled (example #2) (7678ms)
+17:15:49    ✓ Signed in customer lands on checkout with basket warning when SSR is disabled (example #1) (7484ms)
+17:15:56    ✓ Signed in customer lands on checkout with basket warning when SSR is enabled (example #2) (7553ms)
+17:16:03    ✓ Customer deeplinks in with a UFP product with invalid duration when SSR is disabled (example #1) (6852ms)
+17:16:11    ✓ Customer deeplinks in with a UFP product with invalid duration when SSR is enabled (example #2) (7586ms)
+17:16:11
+17:16:11
+17:16:11  16 passing (2m)
+17:16:11
+17:16:11
+17:16:11  (Results)
+17:16:11
+17:16:11  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:16:11  │ Tests:        16                                                                               │
+17:16:11  │ Passing:      16                                                                               │
+17:16:11  │ Failing:      0                                                                                │
+17:16:11  │ Pending:      0                                                                                │
+17:16:11  │ Skipped:      0                                                                                │
+17:16:11  │ Screenshots:  0                                                                                │
+17:16:11  │ Video:        false                                                                            │
+17:16:11  │ Duration:     2 minutes, 16 seconds                                                            │
+17:16:11  │ Spec Ran:     d2c-basket-errors.feature                                                        │
+17:16:11  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:16:11
+17:16:11
+17:16:11====================================================================================================
+17:16:11
+17:16:11  (Run Finished)
+17:16:11
+17:16:11
+17:16:11       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+17:16:11  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:16:11  │ ✔  d2c-basket-errors.feature                02:16       16       16        -        -        - │
+17:16:11  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:16:11    ✔  All specs passed!                        02:16       16       16        -        -        -  
+17:16:11
+17:16:11 WARNING  Network request 'post instances/5f51501a-4443-4b7d-a1ff-b903569071f1/tests' failed: 'Request failed with status code 502'. Next attempt is in 5s (1/3).
+17:16:11
+17:16:11  Reporting results and artifacts in background...  
+17:16:11
+17:16:11 WARNING  Network request 'post runs/1b2e6b507b6cdbb7d3c5ddbff29de87a/instances' failed: 'Request failed with status code 502'. Next attempt is in 5s (1/3).
+17:16:16 WARNING  Network request 'post instances/5f51501a-4443-4b7d-a1ff-b903569071f1/tests' failed: 'Request failed with status code 502'. Next attempt is in 10s (2/3).
+17:16:16 WARNING  Network request 'post runs/1b2e6b507b6cdbb7d3c5ddbff29de87a/instances' failed: 'Request failed with status code 502'. Next attempt is in 10s (2/3).
+17:16:29
+17:16:29====================================================================================================
+17:16:29
+17:16:29Running: cypress/integration/d2c-ineligible-basket.feature (8/42)
+17:16:30[2256:1220/171630.460058:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:16:35
+17:16:35====================================================================================================
+17:16:35
+17:16:35  (Run Starting)
+17:16:35
+17:16:35  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:16:35  │ Cypress:        11.2.0                                                                         │
+17:16:35  │ Browser:        Chrome 116 (headless)                                                          │
+17:16:35  │ Node Version:   v18.17.0 (/usr/local/bin/node)                                                 │
+17:16:35  │ Specs:          1 found (d2c-ineligible-basket.feature)                                        │
+17:16:35  │ Searched:       cypress/integration/d2c-ineligible-basket.feature                              │
+17:16:35  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:16:35
+17:16:35
+17:16:35────────────────────────────────────────────────────────────────────────────────────────────────────
+17:16:35                                                                                                    
+17:16:35  Running:  d2c-ineligible-basket.feature                                                   (1 of 1)
+17:16:48Browserslist: caniuse-lite is outdated. Please run:
+17:16:48  npx update-browserslist-db@latest
+17:16:48  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+17:17:07
+17:17:07
+17:17:07  Ineligible basket
+17:17:07    - New customer goes to sign up with products over the free viewing limit
+17:17:07    - Existing customer with products over the free viewing limit
+17:17:07    - Existing customer with stored payment details and products over the free viewing limit
+17:17:13    ✓ New customer goes to sign up with offer taking them over the free viewing limit when SSR is disabled (example #1) (5976ms)
+17:17:19    ✓ New customer goes to sign up with offer taking them over the free viewing limit when SSR is enabled (example #2) (5575ms)
+17:17:19
+17:17:19
+17:17:19  2 passing (12s)
+17:17:19  3 pending
+17:17:19
+17:17:19
+17:17:19  (Results)
+17:17:19
+17:17:19  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:17:19  │ Tests:        5                                                                                │
+17:17:19  │ Passing:      2                                                                                │
+17:17:19  │ Failing:      0                                                                                │
+17:17:19  │ Pending:      3                                                                                │
+17:17:19  │ Skipped:      0                                                                                │
+17:17:19  │ Screenshots:  0                                                                                │
+17:17:19  │ Video:        false                                                                            │
+17:17:19  │ Duration:     11 seconds                                                                       │
+17:17:19  │ Spec Ran:     d2c-ineligible-basket.feature                                                    │
+17:17:19  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:17:19
+17:17:19
+17:17:19====================================================================================================
+17:17:19
+17:17:19  (Run Finished)
+17:17:19
+17:17:19
+17:17:19       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+17:17:19  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:17:19  │ ✔  d2c-ineligible-basket.feature            00:11        5        2        -        3        - │
+17:17:19  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:17:19    ✔  All specs passed!                        00:11        5        2        -        3        -  
+17:17:19
+17:17:19
+17:17:19  Reporting results and artifacts in background...  
+17:17:19
+17:17:19
+17:17:19====================================================================================================
+17:17:19
+17:17:19Running: cypress/integration/d2c-ineligible-free-trial.feature (9/42)
+17:17:20[2819:1220/171720.638357:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:17:25
+17:17:25====================================================================================================
+17:17:25
+17:17:25  (Run Starting)
+17:17:25
+17:17:25  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:17:25  │ Cypress:        11.2.0                                                                         │
+17:17:25  │ Browser:        Chrome 116 (headless)                                                          │
+17:17:25  │ Node Version:   v18.17.0 (/usr/local/bin/node)                                                 │
+17:17:25  │ Specs:          1 found (d2c-ineligible-free-trial.feature)                                    │
+17:17:25  │ Searched:       cypress/integration/d2c-ineligible-free-trial.feature                          │
+17:17:25  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:17:25
+17:17:25
+17:17:25────────────────────────────────────────────────────────────────────────────────────────────────────
+17:17:25                                                                                                    
+17:17:25  Running:  d2c-ineligible-free-trial.feature                                               (1 of 1)
+17:17:39Browserslist: caniuse-lite is outdated. Please run:
+17:17:39  npx update-browserslist-db@latest
+17:17:39  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+17:17:57
+17:17:57
+17:17:57  Ineligible free trial
+17:17:57    - User is shown the ineligible free trial message when they are not eligible for a free trial when SSR is disabled (example #1)
+17:17:58    - User is shown the ineligible free trial message when they are not eligible for a free trial when SSR is enabled (example #2)
+17:18:26warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:18:26Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:18:26wait  - compiling /__new__/checkout/payment...
+17:18:30warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:18:30Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:18:45warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:18:45Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:18:45wait  - compiling /__new__/checkout/order...
+17:18:46warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:18:46Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:18:54warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:18:54Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:18:54wait  - compiling /__new__/checkout/success...
+17:18:55warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:18:55Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:19:03    ✓ User is shown the ineligible free trial message when they are not eligible for a free trial when SSR is disabled (example #1) (65423ms)
+17:19:44    ✓ User is shown the ineligible free trial message when they are not eligible for a free trial when SSR is enabled (example #2) (40397ms)
+17:19:44
+17:19:44
+17:19:44  2 passing (2m)
+17:19:44  2 pending
+17:19:44
+17:19:44
+17:19:44  (Results)
+17:19:44
+17:19:44  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:19:44  │ Tests:        4                                                                                │
+17:19:44  │ Passing:      2                                                                                │
+17:19:44  │ Failing:      0                                                                                │
+17:19:44  │ Pending:      2                                                                                │
+17:19:44  │ Skipped:      0                                                                                │
+17:19:44  │ Screenshots:  0                                                                                │
+17:19:44  │ Video:        false                                                                            │
+17:19:44  │ Duration:     1 minute, 46 seconds                                                             │
+17:19:44  │ Spec Ran:     d2c-ineligible-free-trial.feature                                                │
+17:19:44  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:19:44
+17:19:45
+17:19:45====================================================================================================
+17:19:45
+17:19:45  (Run Finished)
+17:19:45
+17:19:45
+17:19:45       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+17:19:45  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:19:45  │ ✔  d2c-ineligible-free-trial.feature        01:46        4        2        -        2        - │
+17:19:45  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:19:45    ✔  All specs passed!                        01:46        4        2        -        2        -  
+17:19:45
+17:19:45
+17:19:45  Reporting results and artifacts in background...  
+17:19:45
+17:19:45
+17:19:45====================================================================================================
+17:19:45
+17:19:45Running: cypress/integration/d2c-partial-customers.feature (10/42)
+17:19:47[3401:1220/171947.816525:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:19:56
+17:19:56====================================================================================================
+17:19:56
+17:19:56  (Run Starting)
+17:19:56
+17:19:56  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:19:56  │ Cypress:        11.2.0                                                                         │
+17:19:56  │ Browser:        Chrome 116 (headless)                                                          │
+17:19:56  │ Node Version:   v18.17.0 (/usr/local/bin/node)                                                 │
+17:19:56  │ Specs:          1 found (d2c-partial-customers.feature)                                        │
+17:19:56  │ Searched:       cypress/integration/d2c-partial-customers.feature                              │
+17:19:56  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:19:56
+17:19:56
+17:19:56────────────────────────────────────────────────────────────────────────────────────────────────────
+17:19:56                                                                                                    
+17:19:56  Running:  d2c-partial-customers.feature                                                   (1 of 1)
+17:20:18Browserslist: caniuse-lite is outdated. Please run:
+17:20:18  npx update-browserslist-db@latest
+17:20:18  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+17:20:41
+17:20:41
+17:20:42  D2C Sign Up - Existing Customers
+17:20:42warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:20:42Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:20:42wait  - compiling /[...slug] (client and server)...
+17:20:43warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:20:43Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:20:55    ✓ Should redirect to payment details page for an existing customer when they are not eligible for a free trial when SSR is disabled (example #1) (13305ms)
+17:20:55warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:20:55Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:20:55wait  - compiling /__new__/checkout (client and server)...
+17:20:56warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:20:56Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:21:08warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:21:08Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:21:08wait  - compiling /__new__/checkout/payment...
+17:21:09warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:21:09Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:21:17    ✓ Should redirect to payment details page for an existing customer when they are not eligible for a free trial when SSR is enabled (example #2) (21820ms)
+17:21:21warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:21:21Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:21:21wait  - compiling /[...slug] (client and server)...
+17:21:22warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:21:22Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:21:37    ✓ Redirects to payment details page with address filled in if user has a billingAddress but no payment account when they are not eligible for a free trial when SSR is disabled (example #1) (20313ms)
+17:21:53    ✓ Redirects to payment details page with address filled in if user has a billingAddress but no payment account when they are not eligible for a free trial when SSR is enabled (example #2) (15389ms)
+17:22:07    ✓ Redirects to payment details page if user has a payment account but no billingAddress when they are not eligible for a free trial when SSR is disabled (example #1) (14360ms)
+17:22:18    ✓ Redirects to payment details page if user has a payment account but no billingAddress when they are not eligible for a free trial when SSR is enabled (example #2) (10403ms)
+17:22:24    ✓ Should redirect to select payment page if SkyID and no Persona when they are not eligible for a free trial when SSR is disabled (example #1) (5876ms)
+17:22:29    ✓ Should redirect to select payment page if SkyID and no Persona when they are not eligible for a free trial when SSR is enabled (example #2) (5746ms)
+17:22:34    ✓ Should redirect to sign up page if deep linked into payment selection and no Sky Id when they are not eligible for a free trial when SSR is disabled (example #1) (4054ms)
+17:22:41    ✓ Should redirect to sign up page if deep linked into payment selection and no Sky Id when they are not eligible for a free trial when SSR is enabled (example #2) (7321ms)
+17:22:42    (Attempt 1 of 3) Should redirect to sign up page if deep linked into Order Complete Page when they are not eligible for a free trial when SSR is disabled (example #1)
+17:22:48    ✓ Should redirect to sign up page if deep linked into Order Complete Page when they are not eligible for a free trial when SSR is disabled (example #1) (6080ms)
+17:22:52    ✓ Should redirect to sign up page if deep linked into Order Complete Page when they are not eligible for a free trial when SSR is enabled (example #2) (3605ms)
+17:22:52    (Attempt 1 of 3) Should handle address error loading existing customer checkout when they are not eligible for a free trial when SSR is disabled (example #1)
+17:23:00    ✓ Should handle address error loading existing customer checkout when they are not eligible for a free trial when SSR is disabled (example #1) (7534ms)
+17:23:08    ✓ Should handle address error loading existing customer checkout when they are not eligible for a free trial when SSR is enabled (example #2) (7592ms)
+17:23:18    ✓ Existing Customer should be able to update their payment details when they are not eligible for a free trial when SSR is disabled (example #1) (9673ms)
+17:23:28warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:23:28Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:23:28wait  - compiling /__new__/checkout/order...
+17:23:29warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:23:29Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:23:37warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:23:37Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:23:37wait  - compiling /__new__/checkout/success...
+17:23:37warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:23:37Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:23:44    ✓ Existing Customer should be able to update their payment details when they are not eligible for a free trial when SSR is enabled (example #2) (26570ms)
+17:24:00    ✓ Partial Customer with elevatedSecurity on should be able to update their payment details when they are not eligible for a free trial when SSR is disabled (example #1) (15311ms)
+17:24:00warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:24:00Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:24:00wait  - compiling /__new__/checkout (client and server)...
+17:24:01warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:24:01Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:24:12warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:24:12Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:24:12wait  - compiling /__new__/checkout/payment...
+17:24:13warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:24:13Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:24:25warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:24:25Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:24:25wait  - compiling /__new__/checkout/order...
+17:24:26warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:24:26Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:24:33warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:24:33Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:24:33wait  - compiling /__new__/checkout/success...
+17:24:34warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:24:34Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:24:40    ✓ Partial Customer with elevatedSecurity on should be able to update their payment details when they are not eligible for a free trial when SSR is enabled (example #2) (40337ms)
+17:24:41warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:24:41Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:24:41wait  - compiling /[...slug] (client and server)...
+17:24:42warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:24:42Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:24:59    ✓ Existing Customer should be able to update their payment details when skyID profile fails (example #1) (18716ms)
+17:25:00warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:25:00Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:25:00wait  - compiling /__new__/checkout (client and server)...
+17:25:00warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:25:00Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:25:20warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:25:20Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:25:20wait  - compiling /__new__/checkout/order...
+17:25:20warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:25:20Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:25:28warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:25:28Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:25:28wait  - compiling /__new__/checkout/success...
+17:25:29warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:25:29Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:25:36    ✓ Existing Customer should be able to update their payment details when skyID profile fails (example #2) (36994ms)
+17:25:37warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:25:37Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:25:37wait  - compiling /[...slug] (client and server)...
+17:25:38warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:25:38Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:25:53    ✓ Should redirect to payment details page for an existing customer when they are not eligible for a free trial when SSR is disabled (example #1) (16493ms)
+17:25:53warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:25:53Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:25:53wait  - compiling /__new__/checkout (client and server)...
+17:25:54warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:25:54Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:26:10warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:26:10Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:26:10wait  - compiling /__new__/checkout/success...
+17:26:10    ✓ Should redirect to payment details page for an existing customer when they are not eligible for a free trial when SSR is enabled (example #2) (17075ms)
+17:26:10
+17:26:10
+17:26:10  22 passing (5m)
+17:26:10
+17:26:10
+17:26:10  (Results)
+17:26:10
+17:26:10  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:26:10  │ Tests:        22                                                                               │
+17:26:10  │ Passing:      22                                                                               │
+17:26:10  │ Failing:      0                                                                                │
+17:26:10  │ Pending:      0                                                                                │
+17:26:10  │ Skipped:      0                                                                                │
+17:26:10  │ Screenshots:  2                                                                                │
+17:26:10  │ Video:        false                                                                            │
+17:26:10  │ Duration:     5 minutes, 28 seconds                                                            │
+17:26:10  │ Spec Ran:     d2c-partial-customers.feature                                                    │
+17:26:10  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:26:10
+17:26:10
+17:26:10  (Screenshots)
+17:26:10
+17:26:10  -  /tmp/build/1624bf0d/project/cypress/screenshots/d2c-partial-customers.feature/D2    (1920x1080)
+17:26:10     C Sign Up - Existing Customers -- Should redirect to sign up page if deep linked               
+17:26:10      into Order Complete Page when they are not eligible for a free trial when SSR i               
+17:26:10     s disabled (example #1) (failed).png                                                           
+17:26:10  -  /tmp/build/1624bf0d/project/cypress/screenshots/d2c-partial-customers.feature/D2    (1920x1080)
+17:26:10     C Sign Up - Existing Customers -- Should handle address error loading existing c               
+17:26:10     ustomer checkout when they are not eligible for a free trial when SSR is disable               
+17:26:10     d (example #1) (failed).png                                                                    
+17:26:10
+17:26:10
+17:26:10====================================================================================================
+17:26:10
+17:26:10  (Run Finished)
+17:26:10
+17:26:10
+17:26:10       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+17:26:10  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:26:10  │ ✔  d2c-partial-customers.feature            05:28       22       22        -        -        - │
+17:26:10  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:26:10    ✔  All specs passed!                        05:28       22       22        -        -        -  
+17:26:10
+17:26:10
+17:26:10  Reporting results and artifacts in background...  
+17:26:10
+17:26:11
+17:26:11====================================================================================================
+17:26:11
+17:26:11Running: cypress/integration/d2c-regional-sports.feature (12/42)
+17:26:11warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:26:11Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:26:12[3987:1220/172612.146614:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:26:16
+17:26:17====================================================================================================
+17:26:17
+17:26:17  (Run Starting)
+17:26:17
+17:26:17  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:26:17  │ Cypress:        11.2.0                                                                         │
+17:26:17  │ Browser:        Chrome 116 (headless)                                                          │
+17:26:17  │ Node Version:   v18.17.0 (/usr/local/bin/node)                                                 │
+17:26:17  │ Specs:          1 found (d2c-regional-sports.feature)                                          │
+17:26:17  │ Searched:       cypress/integration/d2c-regional-sports.feature                                │
+17:26:17  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:26:17
+17:26:17
+17:26:17────────────────────────────────────────────────────────────────────────────────────────────────────
+17:26:17                                                                                                    
+17:26:17  Running:  d2c-regional-sports.feature                                                     (1 of 1)
+17:26:30Browserslist: caniuse-lite is outdated. Please run:
+17:26:30  npx update-browserslist-db@latest
+17:26:30  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+17:26:49
+17:26:49
+17:26:49  D2C Regional Sports Network
+17:26:49warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:26:49Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:26:49wait  - compiling /[...slug] (client and server)...
+17:26:50warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:26:50Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:27:15    ✓ Successful Sign Up with regional sports network when SSR is disabled (example #1) (25936ms)
+17:27:29warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:27:29Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:27:29wait  - compiling /__new__/checkout/payment...
+17:27:31warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:27:31Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:27:46warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:27:46Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:27:46wait  - compiling /__new__/checkout/order...
+17:27:47warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:27:47Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:27:58warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:27:58Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:27:58wait  - compiling /__new__/checkout/success...
+17:27:59warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:27:59Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:28:10    ✓ Successful Sign Up with regional sports network when SSR is enabled (example #2) (55322ms)
+17:28:10warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+17:28:10Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+17:28:10wait  - compiling /[...slug] (client and server)...
+17:28:13
+17:28:13<--- Last few GCs --->
+17:28:13
+17:28:13[129:0x7185c70]  1049100 ms: Mark-sweep 4075.6 (4116.1) -> 4073.9 (4116.6) MB, 370.9 / 0.0 ms  (average mu = 0.104, current mu = 0.040) allocation failure; scavenge might not succeed
+17:28:13
+17:28:13
+17:28:13<--- JS stacktrace --->
+17:28:13
+17:28:13FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+17:28:13 1: 0xb83f50 node::Abort() [/usr/local/bin/node]
+17:28:13 2: 0xa94834  [/usr/local/bin/node]
+17:28:13 3: 0xd647c0 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/usr/local/bin/node]
+17:28:13 4: 0xd64b67 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/usr/local/bin/node]
+17:28:13 5: 0xf42265  [/usr/local/bin/node]
+17:28:13 6: 0xf5474d v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/usr/local/bin/node]
+17:28:13 7: 0xf2ee4e v8::internal::HeapAllocator::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/usr/local/bin/node]
+17:28:13 8: 0xf30217 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/usr/local/bin/node]
+17:28:13 9: 0xf10760 v8::internal::Factory::AllocateRaw(int, v8::internal::AllocationType, v8::internal::AllocationAlignment) [/usr/local/bin/node]
+17:28:1310: 0xf07d2c v8::internal::FactoryBase<v8::internal::Factory>::AllocateRawArray(int, v8::internal::AllocationType) [/usr/local/bin/node]
+17:28:1311: 0xf07ea5 v8::internal::FactoryBase<v8::internal::Factory>::NewFixedArrayWithFiller(v8::internal::Handle<v8::internal::Map>, int, v8::internal::Handle<v8::internal::Oddball>, v8::internal::AllocationType) [/usr/local/bin/node]
+17:28:1312: 0x11c2f0e v8::internal::MaybeHandle<v8::internal::OrderedHashMap> v8::internal::OrderedHashTable<v8::internal::OrderedHashMap, 2>::Allocate<v8::internal::Isolate>(v8::internal::Isolate*, int, v8::internal::AllocationType) [/usr/local/bin/node]
+17:28:1313: 0x11c2fc3 v8::internal::MaybeHandle<v8::internal::OrderedHashMap> v8::internal::OrderedHashTable<v8::internal::OrderedHashMap, 2>::Rehash<v8::internal::Isolate>(v8::internal::Isolate*, v8::internal::Handle<v8::internal::OrderedHashMap>, int) [/usr/local/bin/node]
+17:28:1314: 0x12cd30d v8::internal::Runtime_MapGrow(int, unsigned long*, v8::internal::Isolate*) [/usr/local/bin/node]
+17:28:1315: 0x17035b9  [/usr/local/bin/node]
+17:28:20Aborted (core dumped)
+17:28:20    (Attempt 1 of 3) Successful Sign Up with regional sports network and Premium Plus when SSR is disabled (example #1)
+17:28:21    (Attempt 2 of 3) Successful Sign Up with regional sports network and Premium Plus when SSR is disabled (example #1)
+17:28:22    1) "before each" hook for "Successful Sign Up with regional sports network and Premium Plus when SSR is disabled (example #1)"
+17:28:22
+17:28:22
+17:28:22  2 passing (2m)
+17:28:22  1 failing
+17:28:22
+17:28:22  1) D2C Regional Sports Network
+17:28:22       "before each" hook for "Successful Sign Up with regional sports network and Premium Plus when SSR is disabled (example #1)":
+17:28:22     CypressError: `cy.request()` failed trying to load:
+17:28:22
+17:28:22https://local.mock.sky:9999/__cypress_mock_graphql
+17:28:22
+17:28:22We attempted to make an http request to this URL but the request failed without a response.
+17:28:22
+17:28:22We received this error at the network level:
+17:28:22
+17:28:22  > Error: connect ECONNREFUSED 127.0.0.1:9999
+17:28:22
+17:28:22-----------------------------------------------------------
+17:28:22
+17:28:22The request we sent was:
+17:28:22
+17:28:22Method: GET
+17:28:22URL: https://local.mock.sky:9999/__cypress_mock_graphql
+17:28:22
+17:28:22-----------------------------------------------------------
+17:28:22
+17:28:22Common situations why this would fail:
+17:28:22  - you don't have internet access
+17:28:22  - you forgot to run / boot your web server
+17:28:22  - your web server isn't accessible
+17:28:22  - you have weird network configuration settings on your computer
+17:28:22
+17:28:22https://on.cypress.io/request
+17:28:22
+17:28:22Because this error occurred during a `before each` hook we are skipping all of the remaining tests.
+17:28:22      at <unknown> (https://local.mock.sky:9999/__cypress/runner/cypress_runner.js:144280:78)
+17:28:22      at tryCatcher (https://local.mock.sky:9999/__cypress/runner/cypress_runner.js:11327:23)
+17:28:22      at <unknown> (https://local.mock.sky:9999/__cypress/runner/cypress_runner.js:6466:37)
+17:28:22      at tryCatcher (https://local.mock.sky:9999/__cypress/runner/cypress_runner.js:11327:23)
+17:28:22      at Promise._settlePromiseFromHandler (https://local.mock.sky:9999/__cypress/runner/cypress_runner.js:9262:31)
+17:28:22      at Promise._settlePromise (https://local.mock.sky:9999/__cypress/runner/cypress_runner.js:9319:18)
+17:28:22      at Promise._settlePromise0 (https://local.mock.sky:9999/__cypress/runner/cypress_runner.js:9364:10)
+17:28:22      at Promise._settlePromises (https://local.mock.sky:9999/__cypress/runner/cypress_runner.js:9440:18)
+17:28:22      at _drainQueueStep (https://local.mock.sky:9999/__cypress/runner/cypress_runner.js:6034:12)
+17:28:22      at _drainQueue (https://local.mock.sky:9999/__cypress/runner/cypress_runner.js:6027:9)
+17:28:22      at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://local.mock.sky:9999/__cypress/runner/cypress_runner.js:6043:5)
+17:28:22      at Async.drainQueues (https://local.mock.sky:9999/__cypress/runner/cypress_runner.js:5913:14)
+17:28:22  From Your Spec Code:
+17:28:22      at Context.setServerGraphQLMock (node_modules/@sky-uk-ott/ott-sas-web-scripts/lib/mock-server/cypress/helpers/server-mocks.js:24:0)
+17:28:22  
+17:28:22  From Node.js Internals:
+17:28:22    RequestError: Error: connect ECONNREFUSED 127.0.0.1:9999
+17:28:22        at new r (<embedded>:1:14614753)
+17:28:22        at ee.callback (<embedded>:1:14620754)
+17:28:22        at e.callback.s.callback [as _callback] (<embedded>:1:14620200)
+17:28:22        at s._callback.s.callback.s.callback (<embedded>:219:65245)
+17:28:22        at ee.emit (node:events:527:28)
+17:28:22        at ee.onRequestError (<embedded>:219:74304)
+17:28:22        at ClientRequest.emit (node:events:539:35)
+17:28:22        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+17:28:22        at TLSSocket.emit (node:events:527:28)
+17:28:22        at emitErrorNT (node:internal/streams/destroy:157:8)
+17:28:22        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+17:28:22        at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+17:28:22
+17:28:22
+17:28:22
+17:28:22
+17:28:22  (Results)
+17:28:22
+17:28:22  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:28:22  │ Tests:        8                                                                                │
+17:28:22  │ Passing:      2                                                                                │
+17:28:22  │ Failing:      1                                                                                │
+17:28:22  │ Pending:      0                                                                                │
+17:28:22  │ Skipped:      5                                                                                │
+17:28:22  │ Screenshots:  3                                                                                │
+17:28:22  │ Video:        false                                                                            │
+17:28:22  │ Duration:     1 minute, 33 seconds                                                             │
+17:28:22  │ Spec Ran:     d2c-regional-sports.feature                                                      │
+17:28:22  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:28:22
+17:28:22
+17:28:22  (Screenshots)
+17:28:22
+17:28:22  -  /tmp/build/1624bf0d/project/cypress/screenshots/d2c-regional-sports.feature/D2C     (1920x1080)
+17:28:22     Regional Sports Network -- Successful Sign Up with regional sports network and P               
+17:28:22     remium Plus when SSR is disabled (example #1) (failed).png                                     
+17:28:22  -  /tmp/build/1624bf0d/project/cypress/screenshots/d2c-regional-sports.feature/D2C     (1920x1080)
+17:28:22     Regional Sports Network -- Successful Sign Up with regional sports network and P               
+17:28:22     remium Plus when SSR is disabled (example #1) (failed) (attempt 2).png                         
+17:28:22  -  /tmp/build/1624bf0d/project/cypress/screenshots/d2c-regional-sports.feature/Succ    (1920x1080)
+17:28:22     essful Sign Up with regional sports network and Premium Plus when SSR is disable               
+17:28:22     d (example #1) -- before each hook (failed) (attempt 3).png                                    
+17:28:22
+17:28:22
+17:28:22====================================================================================================
+17:28:22
+17:28:22  (Run Finished)
+17:28:22
+17:28:22
+17:28:22       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+17:28:22  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:28:22  │ ✖  d2c-regional-sports.feature              01:33        8        2        1        -        5 │
+17:28:22  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:28:22    ✖  1 of 1 failed (100%)                     01:33        8        2        1        -        5  
+17:28:22
+17:28:22----------------------------------------------------------------------------------------------------
+17:28:22
+17:28:22  Having trouble debugging your CI failures?
+17:28:22  
+17:28:22  Record your runs to Cypress Cloud to watch video recordings for each test, 
+17:28:22  debug failing and flaky tests, and integrate with your favorite tools.
+17:28:22
+17:28:22  >> https://on.cypress.io/cloud-get-started
+17:28:22
+17:28:22----------------------------------------------------------------------------------------------------
+17:28:22
+17:28:22  Reporting results and artifacts in background...  
+17:28:22
+17:28:23
+17:28:23====================================================================================================
+17:28:23
+17:28:23Running: cypress/integration/d2c-verify-email.feature (13/42)
+17:28:24[4569:1220/172824.115189:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:28:28Cypress could not verify that this server is running:
+17:28:28
+17:28:28  > https://local.mock.sky:9999
+17:28:28
+17:28:28We are verifying this server because it has been configured as your baseUrl.
+17:28:28
+17:28:28Cypress automatically waits until your server is accessible before running tests.
+17:28:28
+17:28:28We will try connecting to it 3 more times...
+17:28:31We will try connecting to it 2 more times...
+17:28:34We will try connecting to it 1 more time...
+17:28:34
+17:28:38Cypress failed to verify that your server is running.
+17:28:38
+17:28:38Please start this server and then run Cypress again.
+17:28:38 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:28:38 WARNING  The following spec files will be marked as failed: 
+17:28:38 - /tmp/build/1624bf0d/project/cypress/integration/d2c-verify-email.feature
+17:28:38
+17:28:38  Reporting results and artifacts in background...  
+17:28:38
+17:28:38
+17:28:38====================================================================================================
+17:28:38
+17:28:38Running: cypress/integration/d2c-voucher-code.feature (14/42)
+17:28:39[5034:1220/172839.612814:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:28:43Cypress could not verify that this server is running:
+17:28:43
+17:28:43  > https://local.mock.sky:9999
+17:28:43
+17:28:43We are verifying this server because it has been configured as your baseUrl.
+17:28:43
+17:28:43Cypress automatically waits until your server is accessible before running tests.
+17:28:43
+17:28:43We will try connecting to it 3 more times...
+17:28:46We will try connecting to it 2 more times...
+17:28:49We will try connecting to it 1 more time...
+17:28:49
+17:28:53Cypress failed to verify that your server is running.
+17:28:53
+17:28:53Please start this server and then run Cypress again.
+17:28:53 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:28:53 WARNING  The following spec files will be marked as failed: 
+17:28:53 - /tmp/build/1624bf0d/project/cypress/integration/d2c-voucher-code.feature
+17:28:53
+17:28:53  Reporting results and artifacts in background...  
+17:28:53
+17:28:54
+17:28:54====================================================================================================
+17:28:54
+17:28:54Running: cypress/integration/device-activation-otp.feature (17/42)
+17:28:55[5498:1220/172855.192003:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:28:59Cypress could not verify that this server is running:
+17:28:59
+17:28:59  > https://local.mock.sky:9999
+17:28:59
+17:28:59We are verifying this server because it has been configured as your baseUrl.
+17:28:59
+17:28:59Cypress automatically waits until your server is accessible before running tests.
+17:28:59
+17:28:59We will try connecting to it 3 more times...
+17:29:02We will try connecting to it 2 more times...
+17:29:05We will try connecting to it 1 more time...
+17:29:05
+17:29:09Cypress failed to verify that your server is running.
+17:29:09
+17:29:09Please start this server and then run Cypress again.
+17:29:09 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:29:09 WARNING  The following spec files will be marked as failed: 
+17:29:09 - /tmp/build/1624bf0d/project/cypress/integration/device-activation-otp.feature
+17:29:09
+17:29:09  Reporting results and artifacts in background...  
+17:29:09
+17:29:09
+17:29:09====================================================================================================
+17:29:09
+17:29:09Running: cypress/integration/device-activation-sign-in.feature (18/42)
+17:29:10[5963:1220/172910.654450:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:29:14Cypress could not verify that this server is running:
+17:29:14
+17:29:14  > https://local.mock.sky:9999
+17:29:14
+17:29:14We are verifying this server because it has been configured as your baseUrl.
+17:29:14
+17:29:14Cypress automatically waits until your server is accessible before running tests.
+17:29:14
+17:29:14We will try connecting to it 3 more times...
+17:29:17We will try connecting to it 2 more times...
+17:29:20We will try connecting to it 1 more time...
+17:29:20
+17:29:24Cypress failed to verify that your server is running.
+17:29:24
+17:29:24Please start this server and then run Cypress again.
+17:29:24 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:29:24 WARNING  The following spec files will be marked as failed: 
+17:29:24 - /tmp/build/1624bf0d/project/cypress/integration/device-activation-sign-in.feature
+17:29:24
+17:29:24  Reporting results and artifacts in background...  
+17:29:24
+17:29:25
+17:29:25====================================================================================================
+17:29:25
+17:29:25Running: cypress/integration/elevated-security-already-enrolled.feature (19/42)
+17:29:25(node:174) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added to [ReadStream]. Use emitter.setMaxListeners() to increase limit
+17:29:25(Use `node --trace-warnings ...` to show where the warning was created)
+17:29:26[6427:1220/172926.221586:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:29:30Cypress could not verify that this server is running:
+17:29:30
+17:29:30  > https://local.mock.sky:9999
+17:29:30
+17:29:30We are verifying this server because it has been configured as your baseUrl.
+17:29:30
+17:29:30Cypress automatically waits until your server is accessible before running tests.
+17:29:30
+17:29:30We will try connecting to it 3 more times...
+17:29:33We will try connecting to it 2 more times...
+17:29:36We will try connecting to it 1 more time...
+17:29:36
+17:29:40Cypress failed to verify that your server is running.
+17:29:40
+17:29:40Please start this server and then run Cypress again.
+17:29:40 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:29:40 WARNING  The following spec files will be marked as failed: 
+17:29:40 - /tmp/build/1624bf0d/project/cypress/integration/elevated-security-already-enrolled.feature
+17:29:40
+17:29:40  Reporting results and artifacts in background...  
+17:29:40
+17:29:40
+17:29:40====================================================================================================
+17:29:40
+17:29:40Running: cypress/integration/elevated-security.feature (20/42)
+17:29:41[6892:1220/172941.720064:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:29:46Cypress could not verify that this server is running:
+17:29:46
+17:29:46  > https://local.mock.sky:9999
+17:29:46
+17:29:46We are verifying this server because it has been configured as your baseUrl.
+17:29:46
+17:29:46Cypress automatically waits until your server is accessible before running tests.
+17:29:46
+17:29:46We will try connecting to it 3 more times...
+17:29:49We will try connecting to it 2 more times...
+17:29:52We will try connecting to it 1 more time...
+17:29:52
+17:29:56Cypress failed to verify that your server is running.
+17:29:56
+17:29:56Please start this server and then run Cypress again.
+17:29:56 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:29:56 WARNING  The following spec files will be marked as failed: 
+17:29:56 - /tmp/build/1624bf0d/project/cypress/integration/elevated-security.feature
+17:29:56
+17:29:56  Reporting results and artifacts in background...  
+17:29:56
+17:29:56
+17:29:56====================================================================================================
+17:29:56
+17:29:56Running: cypress/integration/flex-form-ssr.feature (21/42)
+17:29:57[7356:1220/172957.349315:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:30:01Cypress could not verify that this server is running:
+17:30:01
+17:30:01  > https://local.mock.sky:9999
+17:30:01
+17:30:01We are verifying this server because it has been configured as your baseUrl.
+17:30:01
+17:30:01Cypress automatically waits until your server is accessible before running tests.
+17:30:01
+17:30:01We will try connecting to it 3 more times...
+17:30:04We will try connecting to it 2 more times...
+17:30:07We will try connecting to it 1 more time...
+17:30:07
+17:30:11Cypress failed to verify that your server is running.
+17:30:11
+17:30:11Please start this server and then run Cypress again.
+17:30:12 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:30:12 WARNING  The following spec files will be marked as failed: 
+17:30:12 - /tmp/build/1624bf0d/project/cypress/integration/flex-form-ssr.feature
+17:30:12
+17:30:12  Reporting results and artifacts in background...  
+17:30:12
+17:30:12
+17:30:12====================================================================================================
+17:30:12
+17:30:12Running: cypress/integration/flex-form.feature (22/42)
+17:30:13[7821:1220/173013.261552:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:30:17Cypress could not verify that this server is running:
+17:30:17
+17:30:17  > https://local.mock.sky:9999
+17:30:17
+17:30:17We are verifying this server because it has been configured as your baseUrl.
+17:30:17
+17:30:17Cypress automatically waits until your server is accessible before running tests.
+17:30:17
+17:30:17We will try connecting to it 3 more times...
+17:30:20We will try connecting to it 2 more times...
+17:30:23We will try connecting to it 1 more time...
+17:30:23
+17:30:27Cypress failed to verify that your server is running.
+17:30:27
+17:30:27Please start this server and then run Cypress again.
+17:30:27 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:30:27 WARNING  The following spec files will be marked as failed: 
+17:30:27 - /tmp/build/1624bf0d/project/cypress/integration/flex-form.feature
+17:30:27
+17:30:27  Reporting results and artifacts in background...  
+17:30:27
+17:30:28
+17:30:28====================================================================================================
+17:30:28
+17:30:28Running: cypress/integration/forgotten-password.feature (23/42)
+17:30:29[8286:1220/173029.511795:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:30:34Cypress could not verify that this server is running:
+17:30:34
+17:30:34  > https://local.mock.sky:9999
+17:30:34
+17:30:34We are verifying this server because it has been configured as your baseUrl.
+17:30:34
+17:30:34Cypress automatically waits until your server is accessible before running tests.
+17:30:34
+17:30:34We will try connecting to it 3 more times...
+17:30:37We will try connecting to it 2 more times...
+17:30:40We will try connecting to it 1 more time...
+17:30:40
+17:30:44Cypress failed to verify that your server is running.
+17:30:44
+17:30:44Please start this server and then run Cypress again.
+17:30:44 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:30:44 WARNING  The following spec files will be marked as failed: 
+17:30:44 - /tmp/build/1624bf0d/project/cypress/integration/forgotten-password.feature
+17:30:44
+17:30:44  Reporting results and artifacts in background...  
+17:30:44
+17:30:44
+17:30:44====================================================================================================
+17:30:44
+17:30:44Running: cypress/integration/ideal.feature (25/42)
+17:30:45[8752:1220/173045.703687:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:30:50Cypress could not verify that this server is running:
+17:30:50
+17:30:50  > https://local.mock.sky:9999
+17:30:50
+17:30:50We are verifying this server because it has been configured as your baseUrl.
+17:30:50
+17:30:50Cypress automatically waits until your server is accessible before running tests.
+17:30:50
+17:30:50We will try connecting to it 3 more times...
+17:30:53We will try connecting to it 2 more times...
+17:30:56We will try connecting to it 1 more time...
+17:30:56
+17:31:00Cypress failed to verify that your server is running.
+17:31:00
+17:31:00Please start this server and then run Cypress again.
+17:31:00 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:31:00 WARNING  The following spec files will be marked as failed: 
+17:31:00 - /tmp/build/1624bf0d/project/cypress/integration/ideal.feature
+17:31:00
+17:31:00  Reporting results and artifacts in background...  
+17:31:00
+17:31:00
+17:31:00====================================================================================================
+17:31:00
+17:31:00Running: cypress/integration/layout-ssr.feature (26/42)
+17:31:01[9214:1220/173101.705415:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:31:05Cypress could not verify that this server is running:
+17:31:05
+17:31:05  > https://local.mock.sky:9999
+17:31:05
+17:31:05We are verifying this server because it has been configured as your baseUrl.
+17:31:05
+17:31:05Cypress automatically waits until your server is accessible before running tests.
+17:31:05
+17:31:05We will try connecting to it 3 more times...
+17:31:08We will try connecting to it 2 more times...
+17:31:11We will try connecting to it 1 more time...
+17:31:11
+17:31:15Cypress failed to verify that your server is running.
+17:31:15
+17:31:15Please start this server and then run Cypress again.
+17:31:16 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:31:16 WARNING  The following spec files will be marked as failed: 
+17:31:16 - /tmp/build/1624bf0d/project/cypress/integration/layout-ssr.feature
+17:31:16
+17:31:16  Reporting results and artifacts in background...  
+17:31:16
+17:31:16
+17:31:16====================================================================================================
+17:31:16
+17:31:16Running: cypress/integration/localisation.feature (27/42)
+17:31:17[9681:1220/173117.341853:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:31:21Cypress could not verify that this server is running:
+17:31:21
+17:31:21  > https://local.mock.sky:9999
+17:31:21
+17:31:21We are verifying this server because it has been configured as your baseUrl.
+17:31:21
+17:31:21Cypress automatically waits until your server is accessible before running tests.
+17:31:21
+17:31:21We will try connecting to it 3 more times...
+17:31:24We will try connecting to it 2 more times...
+17:31:27We will try connecting to it 1 more time...
+17:31:27
+17:31:31Cypress failed to verify that your server is running.
+17:31:31
+17:31:31Please start this server and then run Cypress again.
+17:31:31 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:31:31 WARNING  The following spec files will be marked as failed: 
+17:31:31 - /tmp/build/1624bf0d/project/cypress/integration/localisation.feature
+17:31:31
+17:31:31  Reporting results and artifacts in background...  
+17:31:31
+17:31:32
+17:31:32====================================================================================================
+17:31:32
+17:31:32Running: cypress/integration/mvpd-rtp.feature (28/42)
+17:31:33[10146:1220/173133.164643:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:31:37Cypress could not verify that this server is running:
+17:31:37
+17:31:37  > https://local.mock.sky:9999
+17:31:37
+17:31:37We are verifying this server because it has been configured as your baseUrl.
+17:31:37
+17:31:37Cypress automatically waits until your server is accessible before running tests.
+17:31:37
+17:31:37We will try connecting to it 3 more times...
+17:31:40We will try connecting to it 2 more times...
+17:31:43We will try connecting to it 1 more time...
+17:31:43
+17:31:47Cypress failed to verify that your server is running.
+17:31:47
+17:31:47Please start this server and then run Cypress again.
+17:31:47 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:31:47 WARNING  The following spec files will be marked as failed: 
+17:31:47 - /tmp/build/1624bf0d/project/cypress/integration/mvpd-rtp.feature
+17:31:47
+17:31:47  Reporting results and artifacts in background...  
+17:31:47
+17:31:47
+17:31:47====================================================================================================
+17:31:47
+17:31:47Running: cypress/integration/paypal.feature (30/42)
+17:31:48[10611:1220/173148.814720:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:31:53Cypress could not verify that this server is running:
+17:31:53
+17:31:53  > https://local.mock.sky:9999
+17:31:53
+17:31:53We are verifying this server because it has been configured as your baseUrl.
+17:31:53
+17:31:53Cypress automatically waits until your server is accessible before running tests.
+17:31:53
+17:31:53We will try connecting to it 3 more times...
+17:31:56We will try connecting to it 2 more times...
+17:31:59We will try connecting to it 1 more time...
+17:31:59
+17:32:03Cypress failed to verify that your server is running.
+17:32:03
+17:32:03Please start this server and then run Cypress again.
+17:32:03 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:32:03 WARNING  The following spec files will be marked as failed: 
+17:32:03 - /tmp/build/1624bf0d/project/cypress/integration/paypal.feature
+17:32:03
+17:32:03  Reporting results and artifacts in background...  
+17:32:03
+17:32:03
+17:32:03====================================================================================================
+17:32:03
+17:32:03Running: cypress/integration/production-smoke-tests.feature (31/42)
+17:32:04[11076:1220/173204.554899:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:32:09Cypress could not verify that this server is running:
+17:32:09
+17:32:09  > https://local.mock.sky:9999
+17:32:09
+17:32:09We are verifying this server because it has been configured as your baseUrl.
+17:32:09
+17:32:09Cypress automatically waits until your server is accessible before running tests.
+17:32:09
+17:32:09We will try connecting to it 3 more times...
+17:32:12We will try connecting to it 2 more times...
+17:32:15We will try connecting to it 1 more time...
+17:32:15
+17:32:19Cypress failed to verify that your server is running.
+17:32:19
+17:32:19Please start this server and then run Cypress again.
+17:32:19 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:32:19 WARNING  The following spec files will be marked as failed: 
+17:32:19 - /tmp/build/1624bf0d/project/cypress/integration/production-smoke-tests.feature
+17:32:19
+17:32:19  Reporting results and artifacts in background...  
+17:32:19
+17:32:19
+17:32:19====================================================================================================
+17:32:19
+17:32:19Running: cypress/integration/qr-upsell.feature (33/42)
+17:32:20[11540:1220/173220.404761:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:32:24Cypress could not verify that this server is running:
+17:32:24
+17:32:24  > https://local.mock.sky:9999
+17:32:24
+17:32:24We are verifying this server because it has been configured as your baseUrl.
+17:32:24
+17:32:24Cypress automatically waits until your server is accessible before running tests.
+17:32:24
+17:32:24We will try connecting to it 3 more times...
+17:32:27We will try connecting to it 2 more times...
+17:32:30We will try connecting to it 1 more time...
+17:32:30
+17:32:34Cypress failed to verify that your server is running.
+17:32:34
+17:32:34Please start this server and then run Cypress again.
+17:32:34 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:32:34 WARNING  The following spec files will be marked as failed: 
+17:32:34 - /tmp/build/1624bf0d/project/cypress/integration/qr-upsell.feature
+17:32:34
+17:32:34  Reporting results and artifacts in background...  
+17:32:34
+17:32:35
+17:32:35====================================================================================================
+17:32:35
+17:32:35Running: cypress/integration/redeem-voucher.feature (34/42)
+17:32:36[12004:1220/173236.286347:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:32:40Cypress could not verify that this server is running:
+17:32:40
+17:32:40  > https://local.mock.sky:9999
+17:32:40
+17:32:40We are verifying this server because it has been configured as your baseUrl.
+17:32:40
+17:32:40Cypress automatically waits until your server is accessible before running tests.
+17:32:40
+17:32:40We will try connecting to it 3 more times...
+17:32:43We will try connecting to it 2 more times...
+17:32:46We will try connecting to it 1 more time...
+17:32:46
+17:32:50Cypress failed to verify that your server is running.
+17:32:50
+17:32:50Please start this server and then run Cypress again.
+17:32:50 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:32:50 WARNING  The following spec files will be marked as failed: 
+17:32:50 - /tmp/build/1624bf0d/project/cypress/integration/redeem-voucher.feature
+17:32:50
+17:32:50  Reporting results and artifacts in background...  
+17:32:50
+17:32:51
+17:32:51====================================================================================================
+17:32:51
+17:32:51Running: cypress/integration/reset-password-via-query.feature (35/42)
+17:32:52[12469:1220/173252.180111:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:32:56Cypress could not verify that this server is running:
+17:32:56
+17:32:56  > https://local.mock.sky:9999
+17:32:56
+17:32:56We are verifying this server because it has been configured as your baseUrl.
+17:32:56
+17:32:56Cypress automatically waits until your server is accessible before running tests.
+17:32:56
+17:32:56We will try connecting to it 3 more times...
+17:32:59We will try connecting to it 2 more times...
+17:33:02We will try connecting to it 1 more time...
+17:33:02
+17:33:06Cypress failed to verify that your server is running.
+17:33:06
+17:33:06Please start this server and then run Cypress again.
+17:33:06 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:33:06 WARNING  The following spec files will be marked as failed: 
+17:33:06 - /tmp/build/1624bf0d/project/cypress/integration/reset-password-via-query.feature
+17:33:06
+17:33:06  Reporting results and artifacts in background...  
+17:33:06
+17:33:06
+17:33:06====================================================================================================
+17:33:06
+17:33:06Running: cypress/integration/reset-password.feature (36/42)
+17:33:08[12934:1220/173308.015191:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:33:12Cypress could not verify that this server is running:
+17:33:12
+17:33:12  > https://local.mock.sky:9999
+17:33:12
+17:33:12We are verifying this server because it has been configured as your baseUrl.
+17:33:12
+17:33:12Cypress automatically waits until your server is accessible before running tests.
+17:33:12
+17:33:12We will try connecting to it 3 more times...
+17:33:15We will try connecting to it 2 more times...
+17:33:18We will try connecting to it 1 more time...
+17:33:18
+17:33:22Cypress failed to verify that your server is running.
+17:33:22
+17:33:22Please start this server and then run Cypress again.
+17:33:22 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:33:22 WARNING  The following spec files will be marked as failed: 
+17:33:22 - /tmp/build/1624bf0d/project/cypress/integration/reset-password.feature
+17:33:22
+17:33:22  Reporting results and artifacts in background...  
+17:33:22
+17:33:23
+17:33:23====================================================================================================
+17:33:23
+17:33:23Running: cypress/integration/resilience.feature (38/42)
+17:33:24[13399:1220/173324.014155:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:33:28Cypress could not verify that this server is running:
+17:33:28
+17:33:28  > https://local.mock.sky:9999
+17:33:28
+17:33:28We are verifying this server because it has been configured as your baseUrl.
+17:33:28
+17:33:28Cypress automatically waits until your server is accessible before running tests.
+17:33:28
+17:33:28We will try connecting to it 3 more times...
+17:33:31We will try connecting to it 2 more times...
+17:33:34We will try connecting to it 1 more time...
+17:33:34
+17:33:38Cypress failed to verify that your server is running.
+17:33:38
+17:33:38Please start this server and then run Cypress again.
+17:33:38 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:33:38 WARNING  The following spec files will be marked as failed: 
+17:33:38 - /tmp/build/1624bf0d/project/cypress/integration/resilience.feature
+17:33:38
+17:33:38  Reporting results and artifacts in background...  
+17:33:38
+17:33:39
+17:33:39====================================================================================================
+17:33:39
+17:33:39Running: cypress/integration/sign-in.feature (40/42)
+17:33:40[13863:1220/173340.032800:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:33:44Cypress could not verify that this server is running:
+17:33:44
+17:33:44  > https://local.mock.sky:9999
+17:33:44
+17:33:44We are verifying this server because it has been configured as your baseUrl.
+17:33:44
+17:33:44Cypress automatically waits until your server is accessible before running tests.
+17:33:44
+17:33:44We will try connecting to it 3 more times...
+17:33:47We will try connecting to it 2 more times...
+17:33:50We will try connecting to it 1 more time...
+17:33:50
+17:33:54Cypress failed to verify that your server is running.
+17:33:54
+17:33:54Please start this server and then run Cypress again.
+17:33:54 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:33:54 WARNING  The following spec files will be marked as failed: 
+17:33:54 - /tmp/build/1624bf0d/project/cypress/integration/sign-in.feature
+17:33:54
+17:33:54  Reporting results and artifacts in background...  
+17:33:54
+17:33:54
+17:33:54====================================================================================================
+17:33:54
+17:33:54Running: cypress/integration/spreedly.feature (41/42)
+17:33:55[14328:1220/173355.764615:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:34:00Cypress could not verify that this server is running:
+17:34:00
+17:34:00  > https://local.mock.sky:9999
+17:34:00
+17:34:00We are verifying this server because it has been configured as your baseUrl.
+17:34:00
+17:34:00Cypress automatically waits until your server is accessible before running tests.
+17:34:00
+17:34:00We will try connecting to it 3 more times...
+17:34:03We will try connecting to it 2 more times...
+17:34:06We will try connecting to it 1 more time...
+17:34:06
+17:34:10Cypress failed to verify that your server is running.
+17:34:10
+17:34:10Please start this server and then run Cypress again.
+17:34:10 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:34:10 WARNING  The following spec files will be marked as failed: 
+17:34:10 - /tmp/build/1624bf0d/project/cypress/integration/spreedly.feature
+17:34:10
+17:34:10  Reporting results and artifacts in background...  
+17:34:10
+17:34:10
+17:34:10====================================================================================================
+17:34:10
+17:34:10Running: cypress/integration/threed-secure.feature (42/42)
+17:34:11[14792:1220/173411.764347:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+17:34:16Cypress could not verify that this server is running:
+17:34:16
+17:34:16  > https://local.mock.sky:9999
+17:34:16
+17:34:16We are verifying this server because it has been configured as your baseUrl.
+17:34:16
+17:34:16Cypress automatically waits until your server is accessible before running tests.
+17:34:16
+17:34:16We will try connecting to it 3 more times...
+17:34:19We will try connecting to it 2 more times...
+17:34:22We will try connecting to it 1 more time...
+17:34:22
+17:34:26Cypress failed to verify that your server is running.
+17:34:26
+17:34:26Please start this server and then run Cypress again.
+17:34:26 WARNING  Cypress runner failed with message: "Could not find Cypress test run results"
+17:34:26 WARNING  The following spec files will be marked as failed: 
+17:34:26 - /tmp/build/1624bf0d/project/cypress/integration/threed-secure.feature
+17:34:26
+17:34:26  Reporting results and artifacts in background...  
+17:34:26
+17:34:26
+17:34:26====================================================================================================
+17:34:26
+17:34:27
+17:34:27  Cloud Run Finished  
+17:34:27
+17:34:27  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+17:34:27  │     Spec                                         Tests   Passing   Failing   Pending   Skipped │
+17:34:27  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+17:34:27  │ ✔   apple-pay.feature                  39.1s         2         2         -         -         - │
+17:34:27  │ ✔   d2c-basket-errors.feature       2m 16.3s        16        16         -         -         - │
+17:34:27  │ ✔   d2c-ineligible-basket.feature      11.8s         5         2         -         3         - │
+17:34:27  │ ✔   d2c-ineligible-free-trial.feat  1m 46.8s         4         2         -         2         - │
+17:34:27  │     ure                                                                                        │
+17:34:27  │ ✔   d2c-partial-customers.feature   5m 28.6s        22        22         -         -         - │
+17:34:27  │ ✖   d2c-regional-sports.feature     1m 33.5s         8         2         1         -         5 │
+17:34:27  │ ✖   cypress/integration/d2c-verify       0ms         1         -         1         -         - │
+17:34:27  │     -email.feature                                                                             │
+17:34:27  │ ✖   cypress/integration/d2c-vouche       0ms         1         -         1         -         - │
+17:34:27  │     r-code.feature                                                                             │
+17:34:27  │ ✖   cypress/integration/device-act       0ms         1         -         1         -         - │
+17:34:27  │     ivation-otp.feature                                                                        │
+17:34:27  │ ✖   cypress/integration/device-act       0ms         1         -         1         -         - │
+17:34:27  │     ivation-sign-in.feature                                                                    │
+17:34:27  │ ✖   cypress/integration/elevated-s       0ms         1         -         1         -         - │
+17:34:27  │     ecurity-already-enrolled.featu                                                             │
+17:34:27  │     re                                                                                         │
+17:34:27  │ ✖   cypress/integration/elevated-s       0ms         1         -         1         -         - │
+17:34:27  │     ecurity.feature                                                                            │
+17:34:27  │ ✖   cypress/integration/flex-form-       0ms         1         -         1         -         - │
+17:34:27  │     ssr.feature                                                                                │
+17:34:27  │ ✖   cypress/integration/flex-form.       0ms         1         -         1         -         - │
+17:34:27  │     feature                                                                                    │
+17:34:27  │ ✖   cypress/integration/forgotten-       0ms         1         -         1         -         - │
+17:34:27  │     password.feature                                                                           │
+17:34:27  │ ✖   cypress/integration/ideal.feat       0ms         1         -         1         -         - │
+17:34:27  │     ure                                                                                        │
+17:34:27  │ ✖   cypress/integration/layout-ssr       0ms         1         -         1         -         - │
+17:34:27  │     .feature                                                                                   │
+17:34:27  │ ✖   cypress/integration/localisati       0ms         1         -         1         -         - │
+17:34:27  │     on.feature                                                                                 │
+17:34:27  │ ✖   cypress/integration/mvpd-rtp.f       0ms         1         -         1         -         - │
+17:34:27  │     eature                                                                                     │
+17:34:27  │ ✖   cypress/integration/paypal.fea       0ms         1         -         1         -         - │
+17:34:27  │     ture                                                                                       │
+17:34:27  │ ✖   cypress/integration/production       0ms         1         -         1         -         - │
+17:34:27  │     -smoke-tests.feature                                                                       │
+17:34:27  │ ✖   cypress/integration/qr-upsell.       0ms         1         -         1         -         - │
+17:34:27  │     feature                                                                                    │
+17:34:27  │ ✖   cypress/integration/redeem-vou       0ms         1         -         1         -         - │
+17:34:27  │     cher.feature                                                                               │
+17:34:27  │ ✖   cypress/integration/reset-pass       0ms         1         -         1         -         - │
+17:34:27  │     word-via-query.feature                                                                     │
+17:34:27  │ ✖   cypress/integration/reset-pass       0ms         1         -         1         -         - │
+17:34:27  │     word.feature                                                                               │
+17:34:27  │ ✖   cypress/integration/resilience       0ms         1         -         1         -         - │
+17:34:27  │     .feature                                                                                   │
+17:34:27  │ ✖   cypress/integration/sign-in.fe       0ms         1         -         1         -         - │
+17:34:27  │     ature                                                                                      │
+17:34:27  │ ✖   cypress/integration/spreedly.f       0ms         1         -         1         -         - │
+17:34:27  │     eature                                                                                     │
+17:34:27  │ ✖   cypress/integration/threed-sec       0ms         1         -         1         -         - │
+17:34:27  │     ure.feature                                                                                │
+17:34:27  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+17:34:27  │ ✖   24 of 29 failed                 11m 56.3        80        46        24         5         5 │
+17:34:27  │                                            s                                                   │
+17:34:27  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+17:34:27
+17:34:27
+17:34:27🏁 Recorded Run: https://sorry-cypress-dashboard.tools.cosmic.sky/run/1b2e6b507b6cdbb7d3c5ddbff29de87a
+17:34:27
+17:34:27error Command failed with exit code 29.                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+17:34:27info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.                                                                                                                                                                                                                                                                                                                                                                                                                               
+17:34:27error Command failed with exit code 29.                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+17:34:27info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.                                                                                                                                                                                                                                                                                                                                                                                                                               
+17:34:27Error: Command failed with exit code 29: CYPRESS_BASE_URL=https://local.mock.sky:9999 SAS_CYPRESS_SSR=true yarn parallelcypress:run --ci-build-id mock-ssr-functional-basket-be-errors-fix-c2c4651 --spec "cypress/integration/*.feature" --env TAGS="@feature and not @skip"
+17:34:27    at makeError (/tmp/build/1624bf0d/project/node_modules/execa/lib/error.js:60:11)
+17:34:27    at handlePromise (/tmp/build/1624bf0d/project/node_modules/execa/index.js:118:26)
+17:34:27    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+17:34:27  shortMessage: 'Command failed with exit code 29: CYPRESS_BASE_URL=https://local.mock.sky:9999 SAS_CYPRESS_SSR=true yarn parallelcypress:run --ci-build-id mock-ssr-functional-basket-be-errors-fix-c2c4651 --spec "cypress/integration/*.feature" --env TAGS="@feature and not @skip"',
+17:34:27  command: 'CYPRESS_BASE_URL=https://local.mock.sky:9999 SAS_CYPRESS_SSR=true yarn parallelcypress:run --ci-build-id mock-ssr-functional-basket-be-errors-fix-c2c4651 --spec "cypress/integration/*.feature" --env TAGS="@feature and not @skip"',
+17:34:27  escapedCommand: '"CYPRESS_BASE_URL=https://local.mock.sky:9999 SAS_CYPRESS_SSR=true yarn parallelcypress:run --ci-build-id mock-ssr-functional-basket-be-errors-fix-c2c4651 --spec \\"cypress/integration/*.feature\\" --env TAGS=\\"@feature and not @skip\\""',
+17:34:27  exitCode: 29,
+17:34:27  signal: undefined,
+17:34:27  signalDescription: undefined,
+17:34:27  stdout: undefined,
+17:34:27  stderr: undefined,
+17:34:27  failed: true,
+17:34:27  timedOut: false,
+17:34:27  isCanceled: false,
+17:34:27  killed: false
+17:34:27}
+17:34:27Error: Command failed: WAIT_ON_TIMEOUT=600000 START_SERVER_AND_TEST_INSECURE=1 start-server-and-test 'NODE_CONFIG_ENV=dev PROVIDER=mock ENV=dev ts-node cypress/test-server.ts' https-get://local.mock.sky:9999/health-check 'CYPRESS_BASE_URL=https://local.mock.sky:9999 SAS_CYPRESS_SSR=true yarn parallelcypress:run --ci-build-id mock-ssr-functional-basket-be-errors-fix-c2c4651 --spec "cypress/integration/*.feature" --env TAGS="@feature and not @skip"'
+17:34:27    at checkExecSyncError (node:child_process:885:11)
+17:34:27    at Object.execSync (node:child_process:957:15)
+17:34:27    at nextFeature (/tmp/build/1624bf0d/project/node_modules/@sky-uk-ott/ott-sas-web-scripts/lib/scripts/next-feature.js:46:22)
+17:34:27    at Object.<anonymous> (/tmp/build/1624bf0d/project/node_modules/@sky-uk-ott/ott-sas-web-scripts/lib/scripts/next-feature.js:53:1)
+17:34:27    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+17:34:27    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+17:34:27    at Module.load (node:internal/modules/cjs/loader:1119:32)
+17:34:27    at Module._load (node:internal/modules/cjs/loader:960:12)
+17:34:27    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12) {
+17:34:27  status: 1,
+17:34:27  signal: null,
+17:34:27  output: [ null, null, null ],
+17:34:27  pid: 120,
+17:34:27  stdout: null,
+17:34:27  stderr: null
+17:34:27}
+17:34:27error Command failed with exit code 1.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+17:34:27info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.                                                                                                                                                                                                                                                                                                                                                                                                                               
+17:34:27Shutdown
+17:34:27

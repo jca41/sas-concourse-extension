@@ -5,14 +5,13 @@ import manifest from "./src/manifest.config";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [svelte(), crx({ manifest })],
-    // HACK: https://github.com/crxjs/chrome-extension-tools/issues/696
-    // https://github.com/crxjs/chrome-extension-tools/issues/746
-    server: {
-        port: 5173,
-        strictPort: true,
-        hmr: {
-            clientPort: 5173,
-        },
+  plugins: [svelte(), crx({ manifest })],
+  // HACK: https://github.com/crxjs/chrome-extension-tools/issues/696
+  // https://github.com/crxjs/chrome-extension-tools/issues/746
+  server: {
+    strictPort: true,
+    hmr: {
+      clientPort: 5173,
     },
+  },
 });

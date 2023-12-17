@@ -1,0 +1,354 @@
+15:13:08selected worker: worker-CZ293605B1-d855-c1n2-191-12
+15:13:29Running commands from peacock-web-core utils
+15:13:29Starting Setup
+15:13:29Setup Branch
+15:13:29Setup Version
+15:13:29Setup Build Id
+15:13:29Showing ENV Info
+15:13:29BUILD_ID: mock-ssr-functional-5499-sign-in-ssr-opt-42bc82b
+15:13:29BRANCH_NAME: "5499-sign-in-ssr-opt"
+15:13:29VERSION: 42bc82b
+15:13:29SAS_CYPRESS_ENV: dev
+15:13:29SAS_CYPRESS_PROPOSITION: 
+15:13:29SAS_CYPRESS_TASK_NUMBER: 0
+15:13:29SAS_CYPRESS_TOTAL_TASKS: 3
+15:13:29LIVE: 
+15:13:29Setup Cypress
+15:13:3225h
+15:13:4025hSetup Hosts
+15:13:42cp: cannot stat 'bundle/dist': No such file or directory
+15:13:42yarn run v1.22.19                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+15:13:42$ NODE_OPTIONS=--max_old_space_size=3800 yarn ci:config --provider=mock --env=dev && SILENCE_LOGS=true BUILD_TYPE=next PROPOSITION=mock ott-sas-web-scripts next-feature --provider=mock --env=dev '--testCmd=SAS_CYPRESS_SSR=true yarn parallelcypress:run --ci-build-id mock-ssr-functional-5499-sign-in-ssr-opt-42bc82b --spec "cypress/integration/*.feature" --env TAGS="@feature and not @skip"'                                                                                                             
+15:13:42$ ott-sas-web-scripts config-map-generator --provider=mock --env=dev                                                                                                                                                                                                                                                                                                                                                                                                                                               
+15:13:44Browserslist: caniuse-lite is outdated. Please run:
+15:13:44  npx update-browserslist-db@latest
+15:13:44  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+15:13:471: starting server using command "NODE_CONFIG_ENV=dev PROVIDER=mock ENV=dev ts-node cypress/test-server.ts"
+15:13:47and when url "[ 'https-get://local.mock.sky:9999/health-check' ]" is responding with HTTP status code 200
+15:13:47WAIT_ON_TIMEOUT is set to 600000
+15:13:47running tests using command "CYPRESS_BASE_URL=https://local.mock.sky:9999 SAS_CYPRESS_SSR=true yarn parallelcypress:run --ci-build-id mock-ssr-functional-5499-sign-in-ssr-opt-42bc82b --spec "cypress/integration/*.feature" --env TAGS="@feature and not @skip""
+15:13:47
+15:13:50Browserslist: caniuse-lite is outdated. Please run:
+15:13:50  npx update-browserslist-db@latest
+15:13:50  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+15:13:52warn  - You have enabled experimental feature (skipTrailingSlashRedirect) in next.config.js.
+15:13:52warn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
+15:13:52
+15:13:53Browserslist: caniuse-lite is outdated. Please run:
+15:13:53  npx browserslist@latest --update-db
+15:13:53  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+15:13:53info  - Disabled SWC as replacement for Babel because of custom Babel configuration "babel.config.js" https://nextjs.org/docs/messages/swc-disabled
+15:13:53info  - automatically enabled Fast Refresh for 1 custom loader
+15:13:53info  - Using external babel configuration from /tmp/build/f3605082/project/babel.config.js
+15:14:20Browserslist: caniuse-lite is outdated. Please run:
+15:14:20  npx update-browserslist-db@latest
+15:14:20  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+15:14:41event - compiled client and server successfully in 48.6s (4708 modules)
+15:14:42info  - Downloading WASM swc package...
+15:14:45info  - Using wasm build of next-swc
+15:14:45warn  - Attempted to load @next/swc-linux-x64-gnu, but it was not installed
+15:14:45warn  - Attempted to load @next/swc-linux-x64-gnux32, but it was not installed
+15:14:45warn  - Attempted to load @next/swc-linux-x64-musl, but it was not installed
+15:14:45Attention: Next.js now collects completely anonymous telemetry regarding usage.
+15:14:45This information is used to shape Next.js' roadmap and prioritize features.
+15:14:45You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+15:14:45https://nextjs.org/telemetry
+15:14:45
+15:14:45>>> MSW Server Ready
+15:14:45>>> Next Server Ready on https://local.mock.sky:9999
+15:14:46$ yarn cypress-cloud run --browser chrome --parallel --record --key nokey --tag $(cat release.txt) --ci-build-id mock-ssr-functional-5499-sign-in-ssr-opt-42bc82b --spec 'cypress/integration/*.feature' --env 'TAGS=@feature and not @skip'                                                                                                                                                                                                                                                                       
+15:14:46$ /tmp/build/f3605082/project/node_modules/.bin/cypress-cloud run --browser chrome --parallel --record --key nokey --tag 5499-sign-in-ssr-opt --ci-build-id mock-ssr-functional-5499-sign-in-ssr-opt-42bc82b --spec 'cypress/integration/*.feature' --env 'TAGS=@feature and not @skip'                                                                                                                                                                                                                            
+15:14:47Using config file: 'file:///tmp/build/f3605082/project/currents.config.js'
+15:14:47
+15:14:47Copyright (C) 2023 Currents Software Inc https://currents.dev
+15:14:47This is free software, and you are welcome to redistribute it under certain
+15:14:47conditions. This program comes with no warranty. Parts of this program are MIT
+15:14:47licensed. Refer to the license for details
+15:14:47https://github.com/currents-dev/cypress-cloud/blob/main/LICENSE.md
+15:14:47
+15:14:55Discovered 42 spec files
+15:14:55Tags: 5499-sign-in-ssr-opt; Group: false; Parallel: true; Batch Size: 3
+15:14:55Connecting to cloud orchestration service...
+15:14:55🎥 Run URL: https://sorry-cypress-dashboard.tools.cosmic.sky/run/2be6fc32672a8a1d62408f7f7c74930b
+15:14:55
+15:14:55====================================================================================================
+15:14:55
+15:14:55Running: cypress/integration/paypal.feature (42/42)
+15:14:56[1086:1214/151456.915178:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+15:15:01
+15:15:01====================================================================================================
+15:15:01
+15:15:01  (Run Starting)
+15:15:01
+15:15:01  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+15:15:01  │ Cypress:        11.2.0                                                                         │
+15:15:01  │ Browser:        Chrome 116 (headless)                                                          │
+15:15:01  │ Node Version:   v18.17.0 (/usr/local/bin/node)                                                 │
+15:15:01  │ Specs:          1 found (paypal.feature)                                                       │
+15:15:01  │ Searched:       cypress/integration/paypal.feature                                             │
+15:15:01  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+15:15:01
+15:15:01
+15:15:01────────────────────────────────────────────────────────────────────────────────────────────────────
+15:15:01                                                                                                    
+15:15:01  Running:  paypal.feature                                                                  (1 of 1)
+15:15:14Browserslist: caniuse-lite is outdated. Please run:
+15:15:14  npx update-browserslist-db@latest
+15:15:14  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+15:15:31
+15:15:31
+15:15:31  D2C Paypal Sign Up
+15:15:31wait  - compiling /[...slug] (client and server)...
+15:15:41warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+15:15:41Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+15:15:56    ✓ "paypal" feature flag is disabled when SSR is disabled (example #1) (24968ms)
+15:15:57warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+15:15:57Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+15:15:57wait  - compiling /__new__/checkout (client and server)...
+15:15:58warn  - ./node_modules/@sky-uk-ott/ott-sas-web-logger/lib/node-require.js
+15:15:58Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+15:16:04[MSW] Warning: captured a request without a matching request handler:
+15:16:04
+15:16:04  • GET https://rango.id.stable-int.mock.sky/signup/service/international
+15:16:04
+15:16:04If you still wish to intercept this unhandled request, please create a request handler for it.
+15:16:04Read more: https://mswjs.io/docs/getting-started/mocks
+15:16:04Warning: Failed prop type: Invalid prop `schema[0]` supplied to `DynamicForm`, expected one of type [string].
+15:16:04    at DynamicForm (webpack-internal:///./node_modules/@sky-uk-ott/atlas-form-builder/es/dynamic-form-component.js:76:5)
+15:16:04    at Form (/tmp/build/f3605082/project/node_modules/redux-form/lib/createReduxForm.js:150:41)
+15:16:04    at ConnectFunction (/tmp/build/f3605082/project/node_modules/react-redux/lib/components/connectAdvanced.js:235:41)
+15:16:04    at forwardConnectRef
+15:16:04    at ReduxForm (/tmp/build/f3605082/project/node_modules/redux-form/lib/createReduxForm.js:890:43)
+15:16:04    at Hoc (/tmp/build/f3605082/project/node_modules/redux-form/lib/ReduxFormContext.js:39:31)
+15:16:04    at ReduxForm
+15:16:04    at div
+15:16:04    at FirstPartyDataForm (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-identity/lib/modules/sign-up/components/first-party-data-form.js:17:3)
+15:16:04    at I (/tmp/build/f3605082/project/node_modules/styled-components/src/models/StyledComponent.js:174:44)
+15:16:04    at DataCollectionForm (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/sign-up/first-party-data-collection/form.js:17:84)
+15:16:04    at div
+15:16:04    at I (/tmp/build/f3605082/project/node_modules/styled-components/src/models/StyledComponent.js:174:44)
+15:16:04    at SignUpFormWrapper (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/sign-up/sign-up-form/sign-up-form-wrapper.js:56:3)
+15:16:04    at div
+15:16:04    at I (/tmp/build/f3605082/project/node_modules/styled-components/src/models/StyledComponent.js:174:44)
+15:16:04    at Pod (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/components/pod/pod.js:24:5)
+15:16:04    at SignUpPod (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/sign-up/sign-up-pod.js:56:3)
+15:16:04    at D2CSignUpPage (webpack-internal:///./src/modules/d2c-sign-up/d2c-sign-up/d2c-sign-up-page.tsx:24:3)
+15:16:04    at TransitionAnimationNoContainer (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/components/transition/transition.js:12:3)
+15:16:04    at I (/tmp/build/f3605082/project/node_modules/styled-components/src/models/StyledComponent.js:174:44)
+15:16:04    at Transition (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/components/transition/transition.js:19:3)
+15:16:04    at TransitionContainer (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/components/transition/transition-container.js:13:3)
+15:16:04    at div
+15:16:04    at I (/tmp/build/f3605082/project/node_modules/styled-components/src/models/StyledComponent.js:174:44)
+15:16:04    at div
+15:16:04    at I (/tmp/build/f3605082/project/node_modules/styled-components/src/models/StyledComponent.js:174:44)
+15:16:04    at Row (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/layout/row.js:17:3)
+15:16:04    at PodWithBasketLayout (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/layouts/pod-with-basket-layout/pod-with-basket-layout.js:15:3)
+15:16:04    at D2cCheckoutLayout (webpack-internal:///./src/modules/d2c-sign-up/layouts/d2c-checkout-layout.tsx:26:3)
+15:16:04    at CheckoutPage (webpack-internal:///./pages/__new__/checkout/index.tsx:61:90)
+15:16:04    at PeacockErrorBoundary (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/layout/peacock-error-boundary.js:18:5)
+15:16:04    at main
+15:16:04    at I (/tmp/build/f3605082/project/node_modules/styled-components/src/models/StyledComponent.js:174:44)
+15:16:04    at div
+15:16:04    at I (/tmp/build/f3605082/project/node_modules/styled-components/src/models/StyledComponent.js:174:44)
+15:16:04    at eval (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/layout/layout.js:29:3)
+15:16:04    at exports.ThemeProvider (/tmp/build/f3605082/project/node_modules/styled-components/src/models/ThemeProvider.js:48:22)
+15:16:04    at ThemeProvider (webpack-internal:///./node_modules/@sky-uk-ott/peacock-toolkit/lib/provider/themeProvider.js:65:5)
+15:16:04    at PeacockLayoutContainer (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/layout/gql-container.js:26:3)
+15:16:04    at PeacockRoot (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-peacock-web-core/lib/layout/peacock-root.js:23:3)
+15:16:04    at IsSignedInWrapper (webpack-internal:///./src/modules/sign-in/is-signed-in-wrapper.tsx:18:3)
+15:16:04    at BaseApp (webpack-internal:///./node_modules/@sky-uk-ott/ott-sas-web-core/lib/pages/_app.js:20:3)
+15:16:04    at Provider (/tmp/build/f3605082/project/node_modules/react-redux/lib/components/Provider.js:21:20)
+15:16:04    at ApolloProvider (/tmp/build/f3605082/project/node_modules/@apollo/client/react/context/ApolloProvider.js:5:21)
+15:16:04    at AppComponent (webpack-internal:///./pages/_app.tsx:62:3)
+15:16:04    at ae (/tmp/build/f3605082/project/node_modules/styled-components/src/models/StyleSheetManager.js:34:48)
+15:16:04    at StyleRegistry (/tmp/build/f3605082/project/node_modules/styled-jsx/dist/index/index.js:448:36)
+15:16:04    at AppContainer (/tmp/build/f3605082/project/node_modules/next/server/render.tsx:624:27)
+15:16:04    at AppContainerWithIsomorphicFiberStructure (/tmp/build/f3605082/project/node_modules/next/server/render.tsx:662:11)
+15:16:04    at div
+15:16:04    at Body (/tmp/build/f3605082/project/node_modules/next/server/render.tsx:1096:19)
+15:16:28    (Attempt 1 of 3) "paypal" feature flag is disabled when SSR is enabled (example #2)
+15:16:29[MSW] Warning: captured a request without a matching request handler:
+15:16:29
+15:16:29  • GET https://rango.id.stable-int.mock.sky/signup/service/international
+15:16:29
+15:16:29If you still wish to intercept this unhandled request, please create a request handler for it.
+15:16:29Read more: https://mswjs.io/docs/getting-started/mocks
+15:16:53    (Attempt 2 of 3) "paypal" feature flag is disabled when SSR is enabled (example #2)
+15:16:53[MSW] Warning: captured a request without a matching request handler:
+15:16:53
+15:16:53  • GET https://rango.id.stable-int.mock.sky/signup/service/international
+15:16:53
+15:16:53If you still wish to intercept this unhandled request, please create a request handler for it.
+15:16:53Read more: https://mswjs.io/docs/getting-started/mocks
+15:17:18    1) "paypal" feature flag is disabled when SSR is enabled (example #2)
+15:17:36    ✓ Successful Sign Up of the Trial Product with success page when SSR is disabled (example #1) (17546ms)
+15:17:36[MSW] Warning: captured a request without a matching request handler:
+15:17:36
+15:17:36  • GET https://rango.id.stable-int.mock.sky/signup/service/international
+15:17:36
+15:17:36If you still wish to intercept this unhandled request, please create a request handler for it.
+15:17:36Read more: https://mswjs.io/docs/getting-started/mocks
+15:18:00    (Attempt 1 of 3) Successful Sign Up of the Trial Product with success page when SSR is enabled (example #2)
+15:18:01[MSW] Warning: captured a request without a matching request handler:
+15:18:01
+15:18:01  • GET https://rango.id.stable-int.mock.sky/signup/service/international
+15:18:01
+15:18:01If you still wish to intercept this unhandled request, please create a request handler for it.
+15:18:01Read more: https://mswjs.io/docs/getting-started/mocks
+15:18:25    (Attempt 2 of 3) Successful Sign Up of the Trial Product with success page when SSR is enabled (example #2)
+15:18:25[MSW] Warning: captured a request without a matching request handler:
+15:18:25
+15:18:25  • GET https://rango.id.stable-int.mock.sky/signup/service/international
+15:18:25
+15:18:25If you still wish to intercept this unhandled request, please create a request handler for it.
+15:18:25Read more: https://mswjs.io/docs/getting-started/mocks
+15:18:50    2) Successful Sign Up of the Trial Product with success page when SSR is enabled (example #2)
+15:18:50    - Successful Paypal Purchase when SSR is disabled (example #1)
+15:18:50    - Successful Paypal Purchase when SSR is enabled (example #2)
+15:18:50
+15:18:50
+15:18:50  2 passing (3m)
+15:18:50  2 pending
+15:18:50  2 failing
+15:18:50
+15:18:50  1) D2C Paypal Sign Up
+15:18:50       "paypal" feature flag is disabled when SSR is enabled (example #2):
+15:18:50     AssertionError: Timed out retrying after 20000ms: expected '<form>' to be 'visible'
+15:18:50
+15:18:50This element `<form>` is not visible because it has an effective width and height of: `508 x 0` pixels.
+15:18:50      at Context.eval (cypress/integration/scoped-steps/sign-up-steps.js:103:33)
+15:18:50      at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)
+15:18:50      at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)
+15:18:50
+15:18:50  2) D2C Paypal Sign Up
+15:18:50       Successful Sign Up of the Trial Product with success page when SSR is enabled (example #2):
+15:18:50     AssertionError: Timed out retrying after 20000ms: expected '<form>' to be 'visible'
+15:18:50
+15:18:50This element `<form>` is not visible because it has an effective width and height of: `508 x 0` pixels.
+15:18:50      at Context.eval (cypress/integration/scoped-steps/sign-up-steps.js:103:33)
+15:18:50      at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)
+15:18:50      at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)
+15:18:50
+15:18:50
+15:18:50
+15:18:50
+15:18:50  (Results)
+15:18:50
+15:18:50  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+15:18:50  │ Tests:        6                                                                                │
+15:18:50  │ Passing:      2                                                                                │
+15:18:50  │ Failing:      2                                                                                │
+15:18:50  │ Pending:      2                                                                                │
+15:18:50  │ Skipped:      0                                                                                │
+15:18:50  │ Screenshots:  6                                                                                │
+15:18:50  │ Video:        false                                                                            │
+15:18:50  │ Duration:     3 minutes, 19 seconds                                                            │
+15:18:50  │ Spec Ran:     paypal.feature                                                                   │
+15:18:50  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+15:18:50
+15:18:50
+15:18:50  (Screenshots)
+15:18:50
+15:18:50  -  /tmp/build/f3605082/project/cypress/screenshots/paypal.feature/D2C Paypal Sign U    (1920x1080)
+15:18:50     p -- paypal feature flag is disabled when SSR is enabled (example #2) (failed).p               
+15:18:50     ng                                                                                             
+15:18:50  -  /tmp/build/f3605082/project/cypress/screenshots/paypal.feature/D2C Paypal Sign U    (1920x1080)
+15:18:50     p -- paypal feature flag is disabled when SSR is enabled (example #2) (failed) (               
+15:18:50     attempt 2).png                                                                                 
+15:18:50  -  /tmp/build/f3605082/project/cypress/screenshots/paypal.feature/D2C Paypal Sign U    (1920x1080)
+15:18:50     p -- paypal feature flag is disabled when SSR is enabled (example #2) (failed) (               
+15:18:50     attempt 3).png                                                                                 
+15:18:50  -  /tmp/build/f3605082/project/cypress/screenshots/paypal.feature/D2C Paypal Sign U    (1920x1080)
+15:18:50     p -- Successful Sign Up of the Trial Product with success page when SSR is enabl               
+15:18:50     ed (example #2) (failed).png                                                                   
+15:18:50  -  /tmp/build/f3605082/project/cypress/screenshots/paypal.feature/D2C Paypal Sign U    (1920x1080)
+15:18:50     p -- Successful Sign Up of the Trial Product with success page when SSR is enabl               
+15:18:50     ed (example #2) (failed) (attempt 2).png                                                       
+15:18:50  -  /tmp/build/f3605082/project/cypress/screenshots/paypal.feature/D2C Paypal Sign U    (1920x1080)
+15:18:50     p -- Successful Sign Up of the Trial Product with success page when SSR is enabl               
+15:18:50     ed (example #2) (failed) (attempt 3).png                                                       
+15:18:50
+15:18:50
+15:18:50====================================================================================================
+15:18:50
+15:18:50  (Run Finished)
+15:18:50
+15:18:50
+15:18:50       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+15:18:50  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+15:18:50  │ ✖  paypal.feature                           03:19        6        2        2        2        - │
+15:18:50  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+15:18:50    ✖  1 of 1 failed (100%)                     03:19        6        2        2        2        -  
+15:18:50
+15:18:50----------------------------------------------------------------------------------------------------
+15:18:50
+15:18:50  Having trouble debugging your CI failures?
+15:18:50  
+15:18:50  Record your runs to Cypress Cloud to watch video recordings for each test, 
+15:18:50  debug failing and flaky tests, and integrate with your favorite tools.
+15:18:50
+15:18:50  >> https://on.cypress.io/cloud-get-started
+15:18:50
+15:18:50----------------------------------------------------------------------------------------------------
+15:18:51
+15:18:51  Reporting results and artifacts in background...  
+15:18:51
+15:18:51
+15:18:51====================================================================================================
+15:18:51
+15:18:51
+15:18:51  Cloud Run Finished  
+15:18:51
+15:18:51  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+15:18:51  │     Spec                                         Tests   Passing   Failing   Pending   Skipped │
+15:18:51  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+15:18:51  │ ✖   paypal.feature                    3m 19s         6         2         2         2         - │
+15:18:51  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+15:18:51  │ ✖   1 of 1 failed                     3m 19s         6         2         2         2         - │
+15:18:51  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+15:18:51
+15:18:51
+15:18:51🏁 Recorded Run: https://sorry-cypress-dashboard.tools.cosmic.sky/run/2be6fc32672a8a1d62408f7f7c74930b
+15:18:51
+15:18:51error Command failed with exit code 2.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+15:18:51info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.                                                                                                                                                                                                                                                                                                                                                                                                                               
+15:18:51error Command failed with exit code 2.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+15:18:51info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.                                                                                                                                                                                                                                                                                                                                                                                                                               
+15:18:51Error: Command failed with exit code 2: CYPRESS_BASE_URL=https://local.mock.sky:9999 SAS_CYPRESS_SSR=true yarn parallelcypress:run --ci-build-id mock-ssr-functional-5499-sign-in-ssr-opt-42bc82b --spec "cypress/integration/*.feature" --env TAGS="@feature and not @skip"
+15:18:51    at makeError (/tmp/build/f3605082/project/node_modules/execa/lib/error.js:60:11)
+15:18:51    at handlePromise (/tmp/build/f3605082/project/node_modules/execa/index.js:118:26)
+15:18:51    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+15:18:51  shortMessage: 'Command failed with exit code 2: CYPRESS_BASE_URL=https://local.mock.sky:9999 SAS_CYPRESS_SSR=true yarn parallelcypress:run --ci-build-id mock-ssr-functional-5499-sign-in-ssr-opt-42bc82b --spec "cypress/integration/*.feature" --env TAGS="@feature and not @skip"',
+15:18:51  command: 'CYPRESS_BASE_URL=https://local.mock.sky:9999 SAS_CYPRESS_SSR=true yarn parallelcypress:run --ci-build-id mock-ssr-functional-5499-sign-in-ssr-opt-42bc82b --spec "cypress/integration/*.feature" --env TAGS="@feature and not @skip"',
+15:18:51  escapedCommand: '"CYPRESS_BASE_URL=https://local.mock.sky:9999 SAS_CYPRESS_SSR=true yarn parallelcypress:run --ci-build-id mock-ssr-functional-5499-sign-in-ssr-opt-42bc82b --spec \\"cypress/integration/*.feature\\" --env TAGS=\\"@feature and not @skip\\""',
+15:18:51  exitCode: 2,
+15:18:51  signal: undefined,
+15:18:51  signalDescription: undefined,
+15:18:51  stdout: undefined,
+15:18:51  stderr: undefined,
+15:18:51  failed: true,
+15:18:51  timedOut: false,
+15:18:51  isCanceled: false,
+15:18:51  killed: false
+15:18:51}
+15:18:51Error: Command failed: WAIT_ON_TIMEOUT=600000 START_SERVER_AND_TEST_INSECURE=1 start-server-and-test 'NODE_CONFIG_ENV=dev PROVIDER=mock ENV=dev ts-node cypress/test-server.ts' https-get://local.mock.sky:9999/health-check 'CYPRESS_BASE_URL=https://local.mock.sky:9999 SAS_CYPRESS_SSR=true yarn parallelcypress:run --ci-build-id mock-ssr-functional-5499-sign-in-ssr-opt-42bc82b --spec "cypress/integration/*.feature" --env TAGS="@feature and not @skip"'
+15:18:51    at checkExecSyncError (node:child_process:885:11)
+15:18:51    at Object.execSync (node:child_process:957:15)
+15:18:51    at nextFeature (/tmp/build/f3605082/project/node_modules/@sky-uk-ott/ott-sas-web-scripts/lib/scripts/next-feature.js:46:22)
+15:18:51    at Object.<anonymous> (/tmp/build/f3605082/project/node_modules/@sky-uk-ott/ott-sas-web-scripts/lib/scripts/next-feature.js:53:1)
+15:18:51    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+15:18:51    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+15:18:51    at Module.load (node:internal/modules/cjs/loader:1119:32)
+15:18:51    at Module._load (node:internal/modules/cjs/loader:960:12)
+15:18:51    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12) {
+15:18:51  status: 1,
+15:18:51  signal: null,
+15:18:51  output: [ null, null, null ],
+15:18:51  pid: 121,
+15:18:51  stdout: null,
+15:18:51  stderr: null
+15:18:51}
+15:18:51error Command failed with exit code 1.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+15:18:51info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.                                                                                                                                                                                                                                                                                                                                                                                                                               
+15:18:51Shutdown
+15:18:51
