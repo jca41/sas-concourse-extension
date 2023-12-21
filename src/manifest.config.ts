@@ -17,10 +17,10 @@ export default defineManifest(async (env) => ({
   version: `${major}.${minor}.${patch}`,
   version_name: version,
   icons: {
-    "16": "src/assets/icons/icon-16.png",
-    "32": "src/assets/icons/icon-32.png",
-    "48": "src/assets/icons/icon-48.png",
-    "128": "src/assets/icons/icon-128.png",
+    "16": "src/assets/icons/icon.png",
+    "32": "src/assets/icons/icon.png",
+    "48": "src/assets/icons/icon.png",
+    "128": "src/assets/icons/icon.png",
   },
   content_scripts: [
     {
@@ -34,10 +34,10 @@ export default defineManifest(async (env) => ({
   action: {
     default_popup: "src/popup/popup.html",
     default_icon: {
-      "16": "src/assets/icons/icon-16.png",
-      "32": "src/assets/icons/icon-32.png",
-      "48": "src/assets/icons/icon-48.png",
-      "128": "src/assets/icons/icon-128.png",
+      "16": "src/assets/icons/icon.png",
+      "32": "src/assets/icons/icon.png",
+      "48": "src/assets/icons/icon.png",
+      "128": "src/assets/icons/icon.png",
     },
   },
   host_permissions: ["https://sas-concourse.ostdc.skyott.com/*"],

@@ -100,7 +100,7 @@ export async function scrollToTimestamp(timestampIndex: number, runId: string) {
 
       if (!target) return;
 
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      target.scrollIntoView({ behavior: "smooth", block: "center" });
     },
     timestampIndex,
     runId
