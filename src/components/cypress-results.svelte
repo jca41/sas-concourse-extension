@@ -1,6 +1,10 @@
 <script lang="ts">
-  import type { RunData } from "../lib/html";
-  import { getSorryCypressUrl, parseCypressRuns } from "../lib/parser";
+  import { scrollToTimestamp, type RunData } from "../lib/html";
+  import {
+    getSorryCypressUrl,
+    parseCypressRuns,
+    type ResultsTable,
+  } from "../lib/parser";
 
   export let data: RunData[number];
 
@@ -12,6 +16,10 @@
   function formatValue(v: string | number | undefined) {
     // NOTE: can be 0
     return v || BLANK;
+  }
+
+  function scrollToSpec(row: ResultsTable) {
+    scrollToTimestamp(row.domIndex, data.title);
   }
 </script>
 
@@ -34,7 +42,11 @@
           <td
             class:text-success={row.status === "passed"}
             class:text-error={row.status === "failed"}
-            class:text-warning={row.status === "running"}>{row.test}</td
+            class:text-warning={row.status === "running"}
+          >
+            <span role="button" on:click={() => scrollToSpec(row)}
+              >{row.test}</span
+            ></td
           >
           <td>{formatValue(row.scenarios)}</td>
           <td>{formatValue(row.passing)}</td>

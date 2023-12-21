@@ -88,3 +88,21 @@ export async function getRunsByType(type: BuildStep) {
 }
 
 export type RunData = Awaited<ReturnType<typeof getRunsByType>>;
+
+export async function scrollToTimestamp(timestampIndex: number, runId: string) {
+  return executeScript(
+    (index: number, id: string) => {
+      const els = document.querySelectorAll<HTMLTableRowElement>(
+        `[data-step-name="${id}"] .timestamped-line`
+      );
+
+      const target = els[index];
+
+      if (!target) return;
+
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    },
+    timestampIndex,
+    runId
+  );
+}

@@ -19,15 +19,19 @@ export type ResultsTable = {
   failing?: number;
   pending?: number;
   skipped?: number;
+  domIndex: number;
 };
 
-export function parseResultsTable(rows: string[]): Omit<ResultsTable, "test"> {
+export function parseResultsTable(
+  rows: string[],
+  offset: number
+): Omit<ResultsTable, "test"> {
   const runFinishedIndex = rows.findIndex((r) =>
     r.startsWith("(Run Finished)")
   );
 
   if (runFinishedIndex === -1) {
-    return { status: "running" };
+    return { status: "running", domIndex: offset };
   }
 
   const entries = rows[runFinishedIndex + 5]
@@ -43,10 +47,15 @@ export function parseResultsTable(rows: string[]): Omit<ResultsTable, "test"> {
     failing: parseStringAsNumber(entries[5]),
     pending: parseStringAsNumber(entries[6]),
     skipped: parseStringAsNumber(entries[7]),
+    domIndex: offset + runFinishedIndex,
   };
 }
 
-export function parseCypressRuns(rows: string[], data: ResultsTable[] = []) {
+export function parseCypressRuns(
+  rows: string[],
+  data: ResultsTable[] = [],
+  offset: number = 0
+) {
   const startRegex = new RegExp(/Running:\s+([^\s\/]+)\.feature/);
 
   const runStartIndex = rows.findIndex((r) => startRegex.test(r));
@@ -59,12 +68,14 @@ export function parseCypressRuns(rows: string[], data: ResultsTable[] = []) {
 
   const testName = rows[runStartIndex].match(startRegex)?.[1] as string;
 
+  const newOffset = offset + rows.length - subRows.length;
+
   const currentTest = {
     test: `${testName}.feature`,
-    ...parseResultsTable(subRows),
+    ...parseResultsTable(subRows, newOffset),
   };
 
-  return parseCypressRuns(subRows, [...data, currentTest]);
+  return parseCypressRuns(subRows, [...data, currentTest], newOffset);
 }
 
 export function getSorryCypressUrl(rows: string[]) {
