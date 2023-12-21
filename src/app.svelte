@@ -57,6 +57,6 @@
       {/if}
     </Tabs>
   {:else}
-    <p class="text-xl">No step data found.</p>
+    <p class="text-lg">No step data found.</p>
   {/if}
 </div>
