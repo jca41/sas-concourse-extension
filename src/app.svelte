@@ -11,19 +11,20 @@
   import Tabs from "./components/tabs.svelte";
   import Nav from "./components/nav.svelte";
   import CypressResults from "./components/cypress-results.svelte";
+  import { loadingStore } from "./lib/stores";
 
-  let loading = false;
   let data: { step: BuildStep | null; run: RunData } = {
     step: null,
     run: [],
   };
 
   async function check() {
-    loading = true;
+    loadingStore.set(true);
     const buildStep = await identityBuildStep();
 
     if (!buildStep) {
-      loading = false;
+      loadingStore.set(false);
+
       return;
     }
 
@@ -31,7 +32,7 @@
 
     data = { step: buildStep, run: runData };
 
-    loading = false;
+    loadingStore.set(false);
   }
 
   function isCypressStep(step: BuildStep | null) {
@@ -46,11 +47,10 @@
   }));
 </script>
 
+<Loading />
 <Nav title={data.step} on:click={check} />
 <div class="bg-base-100 p-3 rounded-md flex flex-col w-[650px]">
-  {#if loading}
-    <Loading />
-  {:else if data.run.length}
+  {#if data.run.length}
     <Tabs {headers} let:active={activeTab}>
       {#if isCypressStep(data.step)}
         <CypressResults data={data.run[activeTab]} />
