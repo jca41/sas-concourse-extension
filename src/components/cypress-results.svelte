@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { scrollToTimestamp, type RunData } from "../lib/html";
+  import { scrollToTimestamp, type TaskData } from "../lib/html";
   import {
     getSorryCypressUrl,
-    parseCypressRuns,
+    parseCypressTasks,
     type ResultsTable,
   } from "../lib/parser";
 
-  export let data: RunData[number];
+  export let data: TaskData[number];
 
-  $: tableData = parseCypressRuns(data.body);
+  $: tableData = parseCypressTasks(data.body);
   $: sorryCypressUrl = getSorryCypressUrl(data.body);
 
   const BLANK = "-";

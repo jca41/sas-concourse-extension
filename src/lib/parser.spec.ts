@@ -7,7 +7,7 @@ import {
   parseResultsTable,
   getSorryCypressUrl,
   isOOM,
-  parseCypressRuns,
+  parseCypressTasks,
 } from "./parser";
 
 const FUNCTIONAL_FAIL_1_ROWS = parseRows(FUNCTIONAL_FAIL_1);
@@ -27,9 +27,9 @@ describe("CMD parser", () => {
     });
   });
 
-  describe("parseCypressRuns", () => {
-    it("should extract test runs", () => {
-      expect(parseCypressRuns(FUNCTIONAL_FAIL_1_ROWS)).toMatchInlineSnapshot(`
+  describe("parseCypressTasks", () => {
+    it("should extract test tasks", () => {
+      expect(parseCypressTasks(FUNCTIONAL_FAIL_1_ROWS)).toMatchInlineSnapshot(`
         [
           {
             "duration": "03:19",
@@ -44,7 +44,7 @@ describe("CMD parser", () => {
         ]
       `);
 
-      expect(parseCypressRuns(FUNCTIONAL_FAIL_2_ROWS)).toMatchInlineSnapshot(`
+      expect(parseCypressTasks(FUNCTIONAL_FAIL_2_ROWS)).toMatchInlineSnapshot(`
         [
           {
             "duration": "05:22",

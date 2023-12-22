@@ -51,7 +51,7 @@ export function parseResultsTable(
   };
 }
 
-export function parseCypressRuns(
+export function parseCypressTasks(
   rows: string[],
   data: ResultsTable[] = [],
   offset: number = 0
@@ -75,7 +75,7 @@ export function parseCypressRuns(
     ...parseResultsTable(subRows, newOffset),
   };
 
-  return parseCypressRuns(subRows, [...data, currentTest], newOffset);
+  return parseCypressTasks(subRows, [...data, currentTest], newOffset);
 }
 
 export function getSorryCypressUrl(rows: string[]) {

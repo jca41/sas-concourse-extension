@@ -42,7 +42,7 @@ export async function identityBuildStep(): Promise<BuildStep | null> {
   });
 }
 
-export async function getRunsByType(type: BuildStep) {
+export async function getTasksByType(type: BuildStep) {
   const TYPE_TO_STEP: Record<BuildStep, string> = {
     functionals: "functional",
     "visual-regression": "visual-regression",
@@ -87,9 +87,12 @@ export async function getRunsByType(type: BuildStep) {
   });
 }
 
-export type RunData = Awaited<ReturnType<typeof getRunsByType>>;
+export type TaskData = Awaited<ReturnType<typeof getTasksByType>>;
 
-export async function scrollToTimestamp(timestampIndex: number, runId: string) {
+export async function scrollToTimestamp(
+  timestampIndex: number,
+  taskId: string
+) {
   return executeScript(
     (index: number, id: string) => {
       const els = document.querySelectorAll<HTMLTableRowElement>(
@@ -103,6 +106,6 @@ export async function scrollToTimestamp(timestampIndex: number, runId: string) {
       target.scrollIntoView({ behavior: "smooth", block: "center" });
     },
     timestampIndex,
-    runId
+    taskId
   );
 }
