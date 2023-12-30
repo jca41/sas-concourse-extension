@@ -1,6 +1,8 @@
 import { get } from "svelte/store";
 import { tabIdStore } from "./stores";
 import { parseRows } from "./parser";
+import type { BuildStep } from "./types";
+import { PPTS, type PPT } from "./utils";
 
 export async function executeScript<F extends (...args: any[]) => any>(
   func: F,
@@ -24,29 +26,50 @@ export async function executeScript<F extends (...args: any[]) => any>(
   });
 }
 
-export type BuildStep = "functionals" | "visual-regression";
-
 export async function identityBuildStep(): Promise<BuildStep | null> {
   return executeScript(() => {
-    const STEPS: BuildStep[] = ["functionals", "visual-regression"];
-
-    const stepName = document.querySelector(".build-name")?.textContent;
+    const stepName = document.querySelector(".build-name")?.textContent ?? null;
 
     if (!stepName) {
       return null;
     }
 
-    return STEPS.includes(stepName as BuildStep)
-      ? (stepName as BuildStep)
-      : null;
+    const STATIC_STEPS: BuildStep[] = ["functionals", "visual-regression"];
+
+    if (STATIC_STEPS.includes(stepName as BuildStep)) {
+      return stepName as BuildStep;
+    }
+
+    if (stepName.endsWith("-e2e")) {
+      return "e2e";
+    }
+
+    return null;
+  });
+}
+
+export async function identityPPT(): Promise<PPT | null> {
+  return executeScript(() => {
+    const stepName = document.querySelector(".build-name")?.textContent ?? null;
+
+    if (!stepName) {
+      return null;
+    }
+
+    const match = stepName.match(/^(peacock|skyshowtime|showmax)-(.+)$/);
+
+    return match ? (match[1] as PPT) : null;
   });
 }
 
 export async function getTasksByType(type: BuildStep) {
-  const TYPE_TO_STEP: Record<BuildStep, string> = {
+  const STATIC_TYPE_TO_STEP: Partial<Record<BuildStep, string>> = {
     functionals: "functional",
-    "visual-regression": "visual-regression",
+    e2e: "e2e-tests",
   };
+
+  let stepKey = STATIC_TYPE_TO_STEP?.[type] ?? type;
+
   const data = await executeScript(async (_type: string) => {
     const els = document.querySelectorAll<HTMLDivElement>(
       `[data-step-name|="${_type}"]`
@@ -77,7 +100,7 @@ export async function getTasksByType(type: BuildStep) {
         };
       })
     );
-  }, TYPE_TO_STEP[type]);
+  }, stepKey);
 
   return data.map((step) => {
     return {

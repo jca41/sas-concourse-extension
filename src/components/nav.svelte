@@ -1,6 +1,9 @@
 <script lang="ts">
   export let title: string | null = null;
+  export let ppt: PPT | null = null;
+
   import IconUrl from "../assets/icons/icon.svg";
+  import type { PPT } from "../lib/utils";
 </script>
 
 <div class="bg-base-300 p-2 flex flex-row justify-between items-center">
@@ -8,7 +11,10 @@
     <img src={IconUrl} class="w-5" alt="icon" />
     <div class="font-mono">{title ?? ""}</div>
   </div>
-  <div>
+  <div class="flex flex-row items-center gap-2">
+    {#if ppt}
+      <div class="badge">{ppt}</div>
+    {/if}
     <button on:click class="btn btn-xs btn-circle">
       <svg
         class="w-4 h-4"

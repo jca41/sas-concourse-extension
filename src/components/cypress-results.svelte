@@ -2,6 +2,7 @@
   import { scrollToTimestamp, type TaskData } from "../lib/html";
   import {
     getSorryCypressUrl,
+    isOOM,
     parseCypressTasks,
     type ResultsTable,
   } from "../lib/parser";
@@ -10,6 +11,7 @@
 
   $: tableData = parseCypressTasks(data.body);
   $: sorryCypressUrl = getSorryCypressUrl(data.body);
+  $: oomError = isOOM(data.body);
 
   const BLANK = "-";
 
@@ -23,6 +25,26 @@
   }
 </script>
 
+{#if oomError}
+  <div role="alert" class="alert alert-error mb-4">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="stroke-current shrink-0 h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      ><path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+      /></svg
+    >
+    <span
+      >FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out
+      of memory</span
+    >
+  </div>
+{/if}
 <div class="overflow-x-auto mb-8">
   <table class="table table-sm">
     <thead>
