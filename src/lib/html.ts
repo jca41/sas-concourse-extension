@@ -83,11 +83,32 @@ export async function getTasksByType(type: BuildStep) {
           el.querySelector<HTMLButtonElement>(".header")?.click?.();
         }
 
+        const activeWebStaticUploadEl =
+          el.parentElement?.parentElement?.querySelector?.(
+            '.children  [data-step-name="web-static-upload"]:not(.inactive)'
+          );
+
+        if (
+          activeWebStaticUploadEl &&
+          !activeWebStaticUploadEl.querySelector(".step-body")
+        ) {
+          activeWebStaticUploadEl
+            .querySelector<HTMLButtonElement>(".header")
+            ?.click?.();
+        }
+
         await new Promise((resolve) => {
           setTimeout(() => {
             resolve(undefined);
           }, 200);
         });
+
+        // NOTE: parsing web-static-upload table
+        const webStaticUploads = Array.from(
+          activeWebStaticUploadEl
+            ?.querySelectorAll?.(".step-body table a")
+            .values?.() ?? []
+        ).map((el) => (el as HTMLAnchorElement).href);
 
         const statusDiv = el.querySelector<HTMLDivElement>(
           ".header > *:last-child > *"
@@ -97,6 +118,7 @@ export async function getTasksByType(type: BuildStep) {
           title: el.dataset.stepName as string,
           status: statusDiv?.dataset.stepState ?? "running",
           body: el.querySelector(".step-body")?.textContent as string,
+          webStaticUploads,
         };
       })
     );

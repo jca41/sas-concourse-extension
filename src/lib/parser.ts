@@ -97,3 +97,18 @@ export function isOOM(rows: string[]) {
     )
   );
 }
+
+export function parseScreenshots(urls: string[]) {
+  return urls.map((url) => {
+    const split = decodeURIComponent(url).split("/");
+
+    const isDiff = split.at(-2) === "__diff_output__";
+
+    return {
+      spec: split.at(isDiff ? -3 : -2) as string,
+      test: split.at(-1) as string,
+      url,
+      isDiff,
+    };
+  });
+}
