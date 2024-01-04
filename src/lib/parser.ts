@@ -91,11 +91,7 @@ export function getSorryCypressUrl(rows: string[]) {
 }
 
 export function isOOM(rows: string[]) {
-  return rows.some((r) =>
-    r.includes(
-      "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
-    )
-  );
+  return rows.some((r) => r.includes("JavaScript heap out of memory"));
 }
 
 export type UploadEntry = { url: string; title: string; tags?: string[] };
