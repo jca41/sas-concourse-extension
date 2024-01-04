@@ -98,17 +98,62 @@ export function isOOM(rows: string[]) {
   );
 }
 
-export function parseScreenshots(urls: string[]) {
-  return urls.map((url) => {
-    const split = decodeURIComponent(url).split("/");
+export type UploadEntry = { url: string; title: string; tags?: string[] };
 
-    const isDiff = split.at(-2) === "__diff_output__";
+export function parseUploads(urls: string[]) {
+  const { default: defaultSection, ...restSections } = urls.reduce(
+    (acc, url) => {
+      const split = decodeURIComponent(url).split("/");
 
-    return {
-      spec: split.at(isDiff ? -3 : -2) as string,
-      test: split.at(-1) as string,
-      url,
-      isDiff,
-    };
-  });
+      let type: "playwright" | "cypress" =
+        split.at(-2) === "playwright-report" ? "playwright" : "cypress";
+
+      let section: string;
+      let entry: UploadEntry;
+
+      switch (type) {
+        case "cypress": {
+          const isCypressDiff = split.at(-2) === "__diff_output__";
+          const specName = split.at(isCypressDiff ? -3 : -2) as string;
+
+          section = specName;
+
+          let tags: string[] = [];
+
+          if (isCypressDiff) {
+            tags.push("diff");
+          }
+
+          entry = {
+            title: split.at(-1)?.replace(" (failed)", "") as string,
+            url,
+            tags,
+          };
+
+          break;
+        }
+        case "playwright": {
+          section = "default";
+          entry = {
+            url,
+            title: "Playwright Report",
+          };
+
+          break;
+        }
+      }
+
+      acc[section] = [...(acc[section] ?? []), entry];
+
+      return acc;
+    },
+    { default: [] } as Record<"default" | (string & {}), UploadEntry[]>
+  );
+
+  return [
+    ...(defaultSection.length
+      ? Object.entries({ default: defaultSection })
+      : []),
+    ...Object.entries(restSections),
+  ];
 }

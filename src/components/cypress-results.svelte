@@ -5,15 +5,14 @@
     getSorryCypressUrl,
     isOOM,
     parseCypressTasks,
-    parseScreenshots,
     type ResultsTable,
   } from "../lib/parser";
+  import WebStaticUploads from "./web-static-uploads.svelte";
 
   export let data: TaskData[number];
 
   $: tableData = parseCypressTasks(data.body);
   $: sorryCypressUrl = getSorryCypressUrl(data.body);
-  $: screenshots = parseScreenshots(data.webStaticUploads);
 
   const BLANK = "-";
 
@@ -89,26 +88,17 @@
   </div>
 
   {#if sorryCypressUrl}
-    <a href={sorryCypressUrl} target="_blank" class="btn btn-sm"
-      ><img
-        src={SorryCypressIcon}
-        alt="sorry cypress"
-        class=" h-full py-1"
-      /></a
-    >
-  {/if}
-
-  {#if screenshots.length}
     <div>
-      <h2 class="mb-4 text-xl font-semibold">Screenshots</h2>
-      <div class="flex flex-col items-start gap-2">
-        {#each screenshots as { url, spec, test }}
-          <a href={url} target="_blank" class="btn btn-xs"
-            ><span>{spec}</span>
-            <span class=" font-normal">{test}</span></a
-          >
-        {/each}
-      </div>
+      <h2 class="mb-4 text-xl font-semibold">Links</h2>
+      <a href={sorryCypressUrl} target="_blank" class="btn btn-sm"
+        ><img
+          src={SorryCypressIcon}
+          alt="sorry cypress"
+          class=" h-full py-1"
+        /></a
+      >
     </div>
   {/if}
+
+  <WebStaticUploads data={data.webStaticUploads} />
 </div>
