@@ -7,7 +7,7 @@
 <a
   href={entry.url}
   target="_blank"
-  class="rounded-xl bg-base-300 p-2 space-y-1 border border-base-content/30 hover:bg-primary/50 transition-colors"
+  class="flex flex-col items-start justify-between rounded-xl bg-base-300 p-2 space-y-1 border border-base-content/30 hover:bg-primary/50 transition-colors"
   ><div class="">{entry.title}</div>
   <div>
     {#each entry?.tags ?? [] as tag}
