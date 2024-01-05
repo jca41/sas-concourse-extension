@@ -90,66 +90,60 @@ export function getSorryCypressUrl(rows: string[]) {
   return match ? match?.[0] : null;
 }
 
+export function getPlaywrightUrl(urls: string[]) {
+  const found = urls.find((url) => url.includes("playwright-report"));
+
+  return found ? decodeURIComponent(found) : null;
+}
+
 export function isOOM(rows: string[]) {
   return rows.some((r) => r.includes("JavaScript heap out of memory"));
 }
 
 export type UploadEntry = { url: string; title: string; tags?: string[] };
 
-export function parseUploads(urls: string[]) {
-  const { default: defaultSection, ...restSections } = urls.reduce(
-    (acc, url) => {
-      const split = decodeURIComponent(url).split("/");
+function detectCypressScreenshotDevice(url: string) {
+  let device: string;
 
-      let type: "playwright" | "cypress" =
-        split.at(-2) === "playwright-report" ? "playwright" : "cypress";
+  if (url.includes("mobile")) {
+    return "mobile";
+  } else if (url.includes("tablet")) {
+    return "tablet";
+  } else if (url.includes("desktop")) {
+    return "desktop";
+  }
 
-      let section: string;
-      let entry: UploadEntry;
+  return null;
+}
 
-      switch (type) {
-        case "cypress": {
-          const isCypressDiff = split.at(-2) === "__diff_output__";
-          const specName = split.at(isCypressDiff ? -3 : -2) as string;
-
-          section = specName;
-
-          let tags: string[] = [];
-
-          if (isCypressDiff) {
-            tags.push("diff");
-          }
-
-          entry = {
-            title: split.at(-1)?.replace(" (failed)", "") as string,
-            url,
-            tags,
-          };
-
-          break;
-        }
-        case "playwright": {
-          section = "default";
-          entry = {
-            url,
-            title: "Playwright Report",
-          };
-
-          break;
-        }
-      }
-
-      acc[section] = [...(acc[section] ?? []), entry];
-
+export function parseCypressScreenshots(urls: string[]) {
+  const sections = urls.reduce((acc, url) => {
+    if (!url.includes("/cypress/screenshots")) {
       return acc;
-    },
-    { default: [] } as Record<"default" | (string & {}), UploadEntry[]>
-  );
+    }
 
-  return [
-    ...(defaultSection.length
-      ? Object.entries({ default: defaultSection })
-      : []),
-    ...Object.entries(restSections),
-  ];
+    const split = decodeURIComponent(url).split("/");
+
+    const isCypressDiff = split.at(-2) === "__diff_output__";
+    const device = detectCypressScreenshotDevice(split?.at(-1) ?? "");
+
+    const tags = [device, isCypressDiff ? "diff" : null].filter(
+      (t): t is string => Boolean(t) && typeof t === "string"
+    );
+
+    const entry: UploadEntry = {
+      title: split.at(-1)?.replace(" (failed)", "") as string,
+      url,
+      tags,
+    };
+
+    const specName = split.at(isCypressDiff ? -3 : -2) as string;
+    const section = specName;
+
+    acc[section] = [...(acc[section] ?? []), entry];
+
+    return acc;
+  }, {} as Record<string, UploadEntry[]>);
+
+  return Object.entries(sections);
 }

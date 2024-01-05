@@ -10,10 +10,12 @@
   import Loading from "./components/loading.svelte";
   import Tabs from "./components/tabs.svelte";
   import Nav from "./components/nav.svelte";
-  import CypressResults from "./components/cypress-results.svelte";
+  import CypressTable from "./components/cypress-table.svelte";
   import { loadingStore } from "./lib/stores";
   import { isCypressStep, type PPT } from "./lib/utils";
   import type { BuildStep } from "./lib/types";
+  import Links from "./components/links.svelte";
+  import CypressScreenshots from "./components/cypress-screenshots.svelte";
 
   let data: { step: BuildStep | null; tasks: TaskData; ppt: PPT | null } = {
     step: null,
@@ -45,6 +47,7 @@
   }
 
   onMount(check);
+
   $: headers = data.tasks.map(({ title, status }) => ({
     title,
     status,
@@ -56,9 +59,13 @@
 <div class="bg-base-100 p-3 rounded-md flex flex-col w-[650px] min-h-[200px]">
   {#if data.step && data.tasks.length}
     <Tabs {headers} let:active={activeTab}>
-      {#if isCypressStep(data.step)}
-        <CypressResults data={data.tasks[activeTab]} />
-      {/if}
+      <div class="space-y-5">
+        {#if isCypressStep(data.step)}
+          <CypressTable data={data.tasks[activeTab]} />
+          <CypressScreenshots data={data.tasks[activeTab].webStaticUploads} />
+        {/if}
+        <Links data={data.tasks[activeTab]} />
+      </div>
     </Tabs>
   {:else if error}
     <div role="alert" class="alert alert-error mb-4">
