@@ -102,63 +102,48 @@ export function isOOM(rows: string[]) {
 
 export type UploadEntry = { url: string; title: string; tags?: string[] };
 
+function detectCypressScreenshotDevice(url: string) {
+  let device: string;
+
+  if (url.includes("mobile")) {
+    return "mobile";
+  } else if (url.includes("tablet")) {
+    return "tablet";
+  } else if (url.includes("desktop")) {
+    return "desktop";
+  }
+
+  return null;
+}
+
 export function parseCypressScreenshots(urls: string[]) {
-  const { default: defaultSection, ...restSections } = urls.reduce(
-    (acc, url) => {
-      if (!url.includes("/cypress/screenshots")) {
-        return acc;
-      }
-      const split = decodeURIComponent(url).split("/");
-
-      let type: "playwright" | "cypress" =
-        split.at(-2) === "playwright-report" ? "playwright" : "cypress";
-
-      let section: string;
-      let entry: UploadEntry;
-
-      switch (type) {
-        case "cypress": {
-          const isCypressDiff = split.at(-2) === "__diff_output__";
-          const specName = split.at(isCypressDiff ? -3 : -2) as string;
-
-          section = specName;
-
-          let tags: string[] = [];
-
-          if (isCypressDiff) {
-            tags.push("diff");
-          }
-
-          entry = {
-            title: split.at(-1)?.replace(" (failed)", "") as string,
-            url,
-            tags,
-          };
-
-          break;
-        }
-        case "playwright": {
-          section = "default";
-          entry = {
-            url,
-            title: "Playwright Report",
-          };
-
-          break;
-        }
-      }
-
-      acc[section] = [...(acc[section] ?? []), entry];
-
+  const sections = urls.reduce((acc, url) => {
+    if (!url.includes("/cypress/screenshots")) {
       return acc;
-    },
-    { default: [] } as Record<"default" | (string & {}), UploadEntry[]>
-  );
+    }
 
-  return [
-    ...(defaultSection.length
-      ? Object.entries({ default: defaultSection })
-      : []),
-    ...Object.entries(restSections),
-  ];
+    const split = decodeURIComponent(url).split("/");
+
+    const isCypressDiff = split.at(-2) === "__diff_output__";
+    const device = detectCypressScreenshotDevice(split?.at(-1) ?? "");
+
+    const tags = [device, isCypressDiff ? "diff" : null].filter(
+      (t): t is string => Boolean(t) && typeof t === "string"
+    );
+
+    const entry: UploadEntry = {
+      title: split.at(-1)?.replace(" (failed)", "") as string,
+      url,
+      tags,
+    };
+
+    const specName = split.at(isCypressDiff ? -3 : -2) as string;
+    const section = specName;
+
+    acc[section] = [...(acc[section] ?? []), entry];
+
+    return acc;
+  }, {} as Record<string, UploadEntry[]>);
+
+  return Object.entries(sections);
 }

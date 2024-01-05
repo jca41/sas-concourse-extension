@@ -39,11 +39,12 @@
 {#if links.length}
   <div>
     <h2 class="mb-4 text-xl font-semibold">Links</h2>
-
-    {#each links as link}
-      <a href={link.href} target="_blank" class="btn btn-sm"
-        ><img src={link.icon} alt={link.title} class=" h-full py-1" /></a
-      >
-    {/each}
+    <div class="flex gap-1">
+      {#each links as link}
+        <a href={link.href} target="_blank" class="btn btn-sm"
+          ><img src={link.icon} alt={link.title} class=" h-full py-1" /></a
+        >
+      {/each}
+    </div>
   </div>
 {/if}
