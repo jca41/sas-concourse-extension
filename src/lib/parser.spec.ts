@@ -32,6 +32,7 @@ describe("CMD parser", () => {
       expect(parseCypressTasks(FUNCTIONAL_FAIL_1_ROWS)).toMatchInlineSnapshot(`
         [
           {
+            "domIndex": 273,
             "duration": "03:19",
             "failing": 2,
             "passing": 2,
@@ -47,6 +48,7 @@ describe("CMD parser", () => {
       expect(parseCypressTasks(FUNCTIONAL_FAIL_2_ROWS)).toMatchInlineSnapshot(`
         [
           {
+            "domIndex": 272,
             "duration": "05:22",
             "failing": 2,
             "passing": 20,
@@ -57,6 +59,7 @@ describe("CMD parser", () => {
             "test": "d2c-partial-customers.feature",
           },
           {
+            "domIndex": 353,
             "duration": "00:36",
             "failing": 0,
             "passing": 9,
@@ -67,6 +70,7 @@ describe("CMD parser", () => {
             "test": "device-activation-otp.feature",
           },
           {
+            "domIndex": 420,
             "duration": "00:12",
             "failing": 0,
             "passing": 2,
@@ -77,6 +81,7 @@ describe("CMD parser", () => {
             "test": "elevated-security-already-enrolled.feature",
           },
           {
+            "domIndex": 516,
             "duration": "01:33",
             "failing": 0,
             "passing": 18,
@@ -87,6 +92,7 @@ describe("CMD parser", () => {
             "test": "flex-form-ssr.feature",
           },
           {
+            "domIndex": 592,
             "duration": "01:25",
             "failing": 0,
             "passing": 14,
@@ -97,6 +103,7 @@ describe("CMD parser", () => {
             "test": "forgotten-password.feature",
           },
           {
+            "domIndex": 682,
             "duration": "00:54",
             "failing": 1,
             "passing": 2,
@@ -107,6 +114,7 @@ describe("CMD parser", () => {
             "test": "mvpd-rtp.feature",
           },
           {
+            "domIndex": 756,
             "duration": "00:17",
             "failing": 0,
             "passing": 2,
@@ -117,6 +125,7 @@ describe("CMD parser", () => {
             "test": "prospect-email-sign-up.feature",
           },
           {
+            "domIndex": 828,
             "duration": "00:45",
             "failing": 0,
             "passing": 10,
@@ -127,6 +136,7 @@ describe("CMD parser", () => {
             "test": "reset-password-via-query.feature",
           },
           {
+            "domIndex": 894,
             "duration": "00:56",
             "failing": 0,
             "passing": 4,
@@ -137,6 +147,7 @@ describe("CMD parser", () => {
             "test": "resilience-ssr.feature",
           },
           {
+            "domIndex": 1174,
             "duration": "05:11",
             "failing": 1,
             "passing": 15,
