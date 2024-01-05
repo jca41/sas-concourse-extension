@@ -90,15 +90,24 @@ export function getSorryCypressUrl(rows: string[]) {
   return match ? match?.[0] : null;
 }
 
+export function getPlaywrightUrl(urls: string[]) {
+  const found = urls.find((url) => url.includes("playwright-report"));
+
+  return found ? decodeURIComponent(found) : null;
+}
+
 export function isOOM(rows: string[]) {
   return rows.some((r) => r.includes("JavaScript heap out of memory"));
 }
 
 export type UploadEntry = { url: string; title: string; tags?: string[] };
 
-export function parseUploads(urls: string[]) {
+export function parseCypressScreenshots(urls: string[]) {
   const { default: defaultSection, ...restSections } = urls.reduce(
     (acc, url) => {
+      if (!url.includes("/cypress/screenshots")) {
+        return acc;
+      }
       const split = decodeURIComponent(url).split("/");
 
       let type: "playwright" | "cypress" =

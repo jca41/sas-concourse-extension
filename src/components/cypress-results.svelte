@@ -1,18 +1,12 @@
 <script lang="ts">
   import { scrollToTimestamp, type TaskData } from "../lib/html";
   import SorryCypressIcon from "../assets/sorry-cypress.svg";
-  import {
-    getSorryCypressUrl,
-    isOOM,
-    parseCypressTasks,
-    type ResultsTable,
-  } from "../lib/parser";
+  import { isOOM, parseCypressTasks, type ResultsTable } from "../lib/parser";
   import WebStaticUploads from "./web-static-uploads.svelte";
 
   export let data: TaskData[number];
 
   $: tableData = parseCypressTasks(data.body);
-  $: sorryCypressUrl = getSorryCypressUrl(data.body);
 
   const BLANK = "-";
 
@@ -44,58 +38,41 @@
   </div>
 {/if}
 
-<div class="space-y-6">
-  <div class="overflow-x-auto">
-    <table class="table table-sm">
-      <thead>
+<div class="overflow-x-auto">
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th>Spec</th>
+        <th>Tests</th>
+        <th>Passing</th>
+        <th>Failing</th>
+        <th>Pending</th>
+        <th>Skipped</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      {#each tableData as row}
         <tr>
-          <th>Spec</th>
-          <th>Tests</th>
-          <th>Passing</th>
-          <th>Failing</th>
-          <th>Pending</th>
-          <th>Skipped</th>
-          <th>Duration</th>
+          <td
+            class:text-success={row.status === "passed"}
+            class:text-error={row.status === "failed"}
+            class:text-warning={row.status === "running"}
+          >
+            <span role="button" tabindex={0} on:click={() => scrollToSpec(row)}
+              >{row.test}</span
+            ></td
+          >
+          <td>{formatValue(row.scenarios)}</td>
+          <td>{formatValue(row.passing)}</td>
+          <td>{formatValue(row.failing)}</td>
+          <td>{formatValue(row.pending)}</td>
+          <td>{formatValue(row.skipped)}</td>
+          <td>{formatValue(row.duration)}</td>
         </tr>
-      </thead>
-      <tbody>
-        {#each tableData as row}
-          <tr>
-            <td
-              class:text-success={row.status === "passed"}
-              class:text-error={row.status === "failed"}
-              class:text-warning={row.status === "running"}
-            >
-              <span
-                role="button"
-                tabindex={0}
-                on:click={() => scrollToSpec(row)}>{row.test}</span
-              ></td
-            >
-            <td>{formatValue(row.scenarios)}</td>
-            <td>{formatValue(row.passing)}</td>
-            <td>{formatValue(row.failing)}</td>
-            <td>{formatValue(row.pending)}</td>
-            <td>{formatValue(row.skipped)}</td>
-            <td>{formatValue(row.duration)}</td>
-          </tr>
-        {/each}
-      </tbody>
-    </table>
-  </div>
-
-  {#if sorryCypressUrl}
-    <div>
-      <h2 class="mb-4 text-xl font-semibold">Links</h2>
-      <a href={sorryCypressUrl} target="_blank" class="btn btn-sm"
-        ><img
-          src={SorryCypressIcon}
-          alt="sorry cypress"
-          class=" h-full py-1"
-        /></a
-      >
-    </div>
-  {/if}
-
-  <WebStaticUploads data={data.webStaticUploads} />
+      {/each}
+    </tbody>
+  </table>
 </div>
+
+<WebStaticUploads data={data.webStaticUploads} />

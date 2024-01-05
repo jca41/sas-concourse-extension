@@ -14,6 +14,7 @@
   import { loadingStore } from "./lib/stores";
   import { isCypressStep, type PPT } from "./lib/utils";
   import type { BuildStep } from "./lib/types";
+  import Links from "./components/links.svelte";
 
   let data: { step: BuildStep | null; tasks: TaskData; ppt: PPT | null } = {
     step: null,
@@ -56,9 +57,12 @@
 <div class="bg-base-100 p-3 rounded-md flex flex-col w-[650px] min-h-[200px]">
   {#if data.step && data.tasks.length}
     <Tabs {headers} let:active={activeTab}>
-      {#if isCypressStep(data.step)}
-        <CypressResults data={data.tasks[activeTab]} />
-      {/if}
+      <div class="space-y-5">
+        {#if isCypressStep(data.step)}
+          <CypressResults data={data.tasks[activeTab]} />
+        {/if}
+        <Links data={data.tasks[activeTab]} />
+      </div>
     </Tabs>
   {:else if error}
     <div role="alert" class="alert alert-error mb-4">
