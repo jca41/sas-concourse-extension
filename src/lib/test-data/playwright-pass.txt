@@ -1,0 +1,72 @@
+07:52:33selected worker: worker-CZ20240GLR-9972-ch2slot2-206-120
+07:52:53Running commands from peacock-web-core utils
+07:52:53Starting Setup
+07:52:53Setup Branch
+07:52:53Setup Version
+07:52:53Setup Build Id
+07:52:53Showing ENV Info
+07:52:53BUILD_ID: peacock-ssr-e2e-5548-profile-calls-02df6a8
+07:52:53BRANCH_NAME: "5548-profile-calls"
+07:52:53VERSION: 02df6a8
+07:52:53SAS_CYPRESS_ENV: e2e
+07:52:53SAS_CYPRESS_PROPOSITION: peacock
+07:52:53SAS_CYPRESS_TASK_NUMBER: 4
+07:52:53SAS_CYPRESS_TOTAL_TASKS: 5
+07:52:53LIVE: 
+07:52:53Setup Cypress
+07:52:5425h
+07:53:0225hTask number 4
+07:53:02Setup Default PPT
+07:53:03Default PPT: nbcu.nbcuott.us
+07:53:03Setup PPTS To Run
+07:53:04PPTS_TO_RUN 
+07:53:04Setup Last Commit Message
+07:53:04Running Cypress Experimental E2E Tests for Proposition peacock
+07:53:04yarn run v1.22.19                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+07:53:04$ ott-sas-web-scripts next-sorry-cypress-e2e --overrideConfig=experimentalSessionAndOrigin=true,experimentalModifyObstructiveThirdPartyCode=true --spec \''cypress/integration/peacock/experimental-tests-ssr.feature'\' --ci-build-id peacock-ssr-e2e-5548-profile-calls-02df6a8-experimental --env 'BRANCH_NAME=-5623,SSR_PREVIEW=true,PREVIEW_COOKIE_NAME=preview-nextjs-sales,TAGS='\''@e2e-peacock-experimental and not @skip'\'                                                                              
+07:53:04$ /tmp/build/6f6ae559/project/node_modules/.bin/cypress-cloud run --browser chrome --config experimentalSessionAndOrigin=true,experimentalModifyObstructiveThirdPartyCode=true --parallel --record --key nokey --tag 5548-profile-calls --spec cypress/integration/peacock/experimental-tests-ssr.feature --ci-build-id peacock-ssr-e2e-5548-profile-calls-02df6a8-experimental --env 'BRANCH_NAME=-5623,SSR_PREVIEW=true,PREVIEW_COOKIE_NAME=preview-nextjs-sales,TAGS=@e2e-peacock-experimental and not @skip'   
+07:53:05Using config file: 'file:///tmp/build/6f6ae559/project/currents.config.js'
+07:53:05
+07:53:05Copyright (C) 2024 Currents Software Inc https://currents.dev
+07:53:05This is free software, and you are welcome to redistribute it under certain
+07:53:05conditions. This program comes with no warranty. Parts of this program are MIT
+07:53:05licensed. Refer to the license for details
+07:53:05https://github.com/currents-dev/cypress-cloud/blob/main/LICENSE.md
+07:53:05
+07:53:11Discovered 1 spec files
+07:53:11Tags: 5548-profile-calls; Group: false; Parallel: true; Batch Size: 3
+07:53:11Connecting to cloud orchestration service...
+07:53:12🎥 Run URL: https://sorry-cypress-dashboard.tools.cosmic.sky/run/e855e9857baa2ebca458b8a9279bac08
+07:53:12
+07:53:12====================================================================================================
+07:53:12
+07:53:12
+07:53:12  Cloud Run Finished  
+07:53:12
+07:53:12  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+07:53:12  │     Spec                                         Tests   Passing   Failing   Pending   Skipped │
+07:53:12  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+07:53:12  │ ✔   No specs executed                    0ms         -         -         -         -         - │
+07:53:12  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+07:53:12
+07:53:12
+07:53:12🏁 Recorded Run: https://sorry-cypress-dashboard.tools.cosmic.sky/run/e855e9857baa2ebca458b8a9279bac08
+07:53:12
+07:53:12Done in 8.38s.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+07:53:42yarn run v1.22.19                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+07:53:42$ /tmp/build/6f6ae559/project/node_modules/.bin/playwright install chromium                                                                                                                                                                                                                                                                                                                                                                                                                                        
+07:53:54 155.8 Mb [====================] 100% 0.0s
+07:53:57 2.6 Mb [====================] 100% 0.0s
+07:53:57Done in 14.48s.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+07:53:57yarn run v1.22.19                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+07:53:57$ playwright test --config ./playwright/playwright.config.ts --project=nbcu.nbcuott.us --grep @peacock --pass-with-no-tests                                                                                                                                                                                                                                                                                                                                                                                        
+07:53:59
+07:53:59Running 2 tests using 2 workers
+07:53:59
+07:53:59  ✓  1 [nbcu.nbcuott.us] › paypal.spec.ts:13:5 › Successful Sign Up with Paypal (Adyen) ending up on the success page [@peacock, @skyshowtime] (44.9s)
+07:53:59  ✓  2 [nbcu.nbcuott.us] › paypal.spec.ts:46:5 › Successful Sign Up with Paypal Direct ending up on the success page [@peacock, @skyshowtime] (37.0s)
+07:54:44
+07:54:44  2 passed (46.4s)
+07:54:44Done in 47.11s.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+07:54:44Shutdown
+07:54:44
