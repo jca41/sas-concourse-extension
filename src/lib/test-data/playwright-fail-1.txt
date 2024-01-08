@@ -1,0 +1,263 @@
+13:12:34selected worker: worker-CZ204802V5-5d68-ch1slot01-203-109
+13:12:51Running commands from peacock-web-core utils
+13:12:51Starting Setup
+13:12:51Setup Branch
+13:12:51Setup Version
+13:12:51Setup Build Id
+13:12:51Showing ENV Info
+13:12:51BUILD_ID: peacock-ssr-e2e-5548-profile-calls-02df6a8
+13:12:51BRANCH_NAME: "5548-profile-calls"
+13:12:51VERSION: 02df6a8
+13:12:51SAS_CYPRESS_ENV: e2e
+13:12:51SAS_CYPRESS_PROPOSITION: peacock
+13:12:51SAS_CYPRESS_TASK_NUMBER: 4
+13:12:51SAS_CYPRESS_TOTAL_TASKS: 5
+13:12:51LIVE: 
+13:12:51Setup Cypress
+13:12:5225h
+13:13:0125hTask number 4
+13:13:01Setup Default PPT
+13:13:02Default PPT: nbcu.nbcuott.us
+13:13:02Setup PPTS To Run
+13:13:03PPTS_TO_RUN 
+13:13:03Setup Last Commit Message
+13:13:03Running Cypress Experimental E2E Tests for Proposition peacock
+13:13:03yarn run v1.22.19                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+13:13:04$ ott-sas-web-scripts next-sorry-cypress-e2e --overrideConfig=experimentalSessionAndOrigin=true,experimentalModifyObstructiveThirdPartyCode=true --spec \''cypress/integration/peacock/experimental-tests-ssr.feature'\' --ci-build-id peacock-ssr-e2e-5548-profile-calls-02df6a8-experimental --env 'BRANCH_NAME=-5623,SSR_PREVIEW=true,PREVIEW_COOKIE_NAME=preview-nextjs-sales,TAGS='\''@e2e-peacock-experimental and not @skip'\'                                                                              
+13:13:04$ /tmp/build/6f6ae559/project/node_modules/.bin/cypress-cloud run --browser chrome --config experimentalSessionAndOrigin=true,experimentalModifyObstructiveThirdPartyCode=true --parallel --record --key nokey --tag 5548-profile-calls --spec cypress/integration/peacock/experimental-tests-ssr.feature --ci-build-id peacock-ssr-e2e-5548-profile-calls-02df6a8-experimental --env 'BRANCH_NAME=-5623,SSR_PREVIEW=true,PREVIEW_COOKIE_NAME=preview-nextjs-sales,TAGS=@e2e-peacock-experimental and not @skip'   
+13:13:05Using config file: 'file:///tmp/build/6f6ae559/project/currents.config.js'
+13:13:05
+13:13:05Copyright (C) 2024 Currents Software Inc https://currents.dev
+13:13:05This is free software, and you are welcome to redistribute it under certain
+13:13:05conditions. This program comes with no warranty. Parts of this program are MIT
+13:13:05licensed. Refer to the license for details
+13:13:05https://github.com/currents-dev/cypress-cloud/blob/main/LICENSE.md
+13:13:05
+13:13:12Discovered 1 spec files
+13:13:12Tags: 5548-profile-calls; Group: false; Parallel: true; Batch Size: 3
+13:13:12Connecting to cloud orchestration service...
+13:13:12🎥 Run URL: https://sorry-cypress-dashboard.tools.cosmic.sky/run/e855e9857baa2ebca458b8a9279bac08
+13:13:12
+13:13:12====================================================================================================
+13:13:12
+13:13:12
+13:13:12  Cloud Run Finished  
+13:13:12
+13:13:12  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+13:13:12  │     Spec                                         Tests   Passing   Failing   Pending   Skipped │
+13:13:12  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+13:13:12  │ ✔   No specs executed                    0ms         -         -         -         -         - │
+13:13:12  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+13:13:12
+13:13:12
+13:13:12🏁 Recorded Run: https://sorry-cypress-dashboard.tools.cosmic.sky/run/e855e9857baa2ebca458b8a9279bac08
+13:13:12
+13:13:12Done in 8.73s.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+13:13:42yarn run v1.22.19                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+13:13:42$ /tmp/build/6f6ae559/project/node_modules/.bin/playwright install chromium                                                                                                                                                                                                                                                                                                                                                                                                                                        
+13:13:48 155.8 Mb [====================] 100% 0.0s
+13:13:51 2.6 Mb [====================] 100% 0.0s
+13:13:51Done in 8.35s.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+13:13:51yarn run v1.22.19                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+13:13:51$ playwright test --config ./playwright/playwright.config.ts --project=nbcu.nbcuott.us --grep @peacock --pass-with-no-tests                                                                                                                                                                                                                                                                                                                                                                                        
+13:13:52
+13:13:52Running 2 tests using 2 workers
+13:13:52
+13:13:53  ✘  1 [nbcu.nbcuott.us] › paypal.spec.ts:46:5 › Successful Sign Up with Paypal Direct ending up on the success page [@peacock, @skyshowtime] (60.0s)
+13:13:53  ✘  2 [nbcu.nbcuott.us] › paypal.spec.ts:13:5 › Successful Sign Up with Paypal (Adyen) ending up on the success page [@peacock, @skyshowtime] (60.0s)
+13:14:53  ✘  3 [nbcu.nbcuott.us] › paypal.spec.ts:13:5 › Successful Sign Up with Paypal (Adyen) ending up on the success page [@peacock, @skyshowtime] (retry #1) (1.0m)
+13:14:54  ✘  4 [nbcu.nbcuott.us] › paypal.spec.ts:46:5 › Successful Sign Up with Paypal Direct ending up on the success page [@peacock, @skyshowtime] (retry #1) (1.0m)
+13:15:55  ✘  5 [nbcu.nbcuott.us] › paypal.spec.ts:13:5 › Successful Sign Up with Paypal (Adyen) ending up on the success page [@peacock, @skyshowtime] (retry #2) (60.0s)
+13:15:55  ✘  6 [nbcu.nbcuott.us] › paypal.spec.ts:46:5 › Successful Sign Up with Paypal Direct ending up on the success page [@peacock, @skyshowtime] (retry #2) (1.0m)
+13:16:55  ✓  7 [nbcu.nbcuott.us] › paypal.spec.ts:13:5 › Successful Sign Up with Paypal (Adyen) ending up on the success page [@peacock, @skyshowtime] (retry #3) (39.7s)
+13:16:55  ✘  8 [nbcu.nbcuott.us] › paypal.spec.ts:46:5 › Successful Sign Up with Paypal Direct ending up on the success page [@peacock, @skyshowtime] (retry #3) (16.4s)
+13:17:35
+13:17:35
+13:17:35  1) [nbcu.nbcuott.us] › paypal.spec.ts:46:5 › Successful Sign Up with Paypal Direct ending up on the success page [@peacock, @skyshowtime] 
+13:17:35
+13:17:35    Test timeout of 60000ms exceeded.
+13:17:35
+13:17:35    Error: locator.click: Test timeout of 60000ms exceeded.
+13:17:35    Call log:
+13:17:35      - waiting for getByTestId('sign-up-form__submit')
+13:17:35      -   locator resolved to <button disabled type="submit" data-tracking="true" data…>Create Account</button>
+13:17:35      - attempting click action
+13:17:35      -   waiting for element to be visible, enabled and stable
+13:17:35      -     element is not enabled - waiting...
+13:17:35
+13:17:35
+13:17:35      61 |
+13:17:35      62 |   // Submit form
+13:17:35    > 63 |   await page.getByTestId('sign-up-form__submit').click();
+13:17:35         |                                                  ^
+13:17:35      64 |
+13:17:35      65 |   // Check payment methods
+13:17:35      66 |   await assertPaymentMethodsVisible(page, ['SPREEDLY', 'PAYPAL_DIRECT']);
+13:17:35
+13:17:35        at /tmp/build/6f6ae559/project/playwright/tests/paypal.spec.ts:63:50
+13:17:35
+13:17:35    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+13:17:35
+13:17:35    Test timeout of 60000ms exceeded.
+13:17:35
+13:17:35    Error: locator.click: Test timeout of 60000ms exceeded.
+13:17:35    Call log:
+13:17:35      - waiting for getByTestId('sign-up-form__submit')
+13:17:35      -   locator resolved to <button disabled type="submit" data-tracking="true" data…>Create Account</button>
+13:17:35      - attempting click action
+13:17:35      -   waiting for element to be visible, enabled and stable
+13:17:35      -     element is not enabled - waiting...
+13:17:35
+13:17:35
+13:17:35      61 |
+13:17:35      62 |   // Submit form
+13:17:35    > 63 |   await page.getByTestId('sign-up-form__submit').click();
+13:17:35         |                                                  ^
+13:17:35      64 |
+13:17:35      65 |   // Check payment methods
+13:17:35      66 |   await assertPaymentMethodsVisible(page, ['SPREEDLY', 'PAYPAL_DIRECT']);
+13:17:35
+13:17:35        at /tmp/build/6f6ae559/project/playwright/tests/paypal.spec.ts:63:50
+13:17:35
+13:17:35    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+13:17:35    test-results/paypal-Successful-Sign-Up-with-Paypal-Direct-ending-up-on-the-success-page-peacock-skyshowtime--nbcu-nbcuott-us-retry1/trace.zip
+13:17:35    Usage:
+13:17:35
+13:17:35        yarn playwright show-trace test-results/paypal-Successful-Sign-Up-with-Paypal-Direct-ending-up-on-the-success-page-peacock-skyshowtime--nbcu-nbcuott-us-retry1/trace.zip
+13:17:35
+13:17:35    ────────────────────────────────────────────────────────────────────────────────────────────────
+13:17:35
+13:17:35    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+13:17:35
+13:17:35    Test timeout of 60000ms exceeded.
+13:17:35
+13:17:35    Error: locator.click: Test timeout of 60000ms exceeded.
+13:17:35    Call log:
+13:17:35      - waiting for getByTestId('sign-up-form__submit')
+13:17:35      -   locator resolved to <button disabled type="submit" data-tracking="true" data…>Create Account</button>
+13:17:35      - attempting click action
+13:17:35      -   waiting for element to be visible, enabled and stable
+13:17:35      -     element is not enabled - waiting...
+13:17:35
+13:17:35
+13:17:35      61 |
+13:17:35      62 |   // Submit form
+13:17:35    > 63 |   await page.getByTestId('sign-up-form__submit').click();
+13:17:35         |                                                  ^
+13:17:35      64 |
+13:17:35      65 |   // Check payment methods
+13:17:35      66 |   await assertPaymentMethodsVisible(page, ['SPREEDLY', 'PAYPAL_DIRECT']);
+13:17:35
+13:17:35        at /tmp/build/6f6ae559/project/playwright/tests/paypal.spec.ts:63:50
+13:17:35
+13:17:35    Retry #3 ───────────────────────────────────────────────────────────────────────────────────────
+13:17:35
+13:17:35    Error: Timed out 7000ms waiting for expect(locator).toBeVisible()
+13:17:35
+13:17:35    Locator: locator('[data-paymentmethod="CARD"]')
+13:17:35    Expected: visible
+13:17:35    Received: hidden
+13:17:35    Call log:
+13:17:35      - expect.toBeVisible with timeout 7000ms
+13:17:35      - waiting for locator('[data-paymentmethod="CARD"]')
+13:17:35
+13:17:35
+13:17:35       at ../steps/payment-methods-steps.ts:18
+13:17:35
+13:17:35      16 |       const method = paymentMethod === 'SPREEDLY' ? 'CARD' : paymentMethod;
+13:17:35      17 |
+13:17:35    > 18 |       return expect(page.locator(`[data-paymentmethod="${method}"]`)).toBeVisible();
+13:17:35         |                                                                       ^
+13:17:35      19 |     })
+13:17:35      20 |   );
+13:17:35      21 | };
+13:17:35
+13:17:35        at map (/tmp/build/6f6ae559/project/playwright/steps/payment-methods-steps.ts:18:71)
+13:17:35        at assertPaymentMethodsVisible (/tmp/build/6f6ae559/project/playwright/steps/payment-methods-steps.ts:15:20)
+13:17:35        at /tmp/build/6f6ae559/project/playwright/tests/paypal.spec.ts:66:36
+13:17:35
+13:17:35  2) [nbcu.nbcuott.us] › paypal.spec.ts:13:5 › Successful Sign Up with Paypal (Adyen) ending up on the success page [@peacock, @skyshowtime] 
+13:17:35
+13:17:35    Test timeout of 60000ms exceeded.
+13:17:35
+13:17:35    Error: locator.click: Test timeout of 60000ms exceeded.
+13:17:35    Call log:
+13:17:35      - waiting for getByTestId('sign-up-form__submit')
+13:17:35      -   locator resolved to <button disabled type="submit" data-tracking="true" data…>Create Account</button>
+13:17:35      - attempting click action
+13:17:35      -   waiting for element to be visible, enabled and stable
+13:17:35      -     element is not enabled - waiting...
+13:17:35
+13:17:35
+13:17:35      26 |
+13:17:35      27 |   // Submit form
+13:17:35    > 28 |   await page.getByTestId('sign-up-form__submit').click();
+13:17:35         |                                                  ^
+13:17:35      29 |
+13:17:35      30 |   // Check payment methods
+13:17:35      31 |   await assertPaymentMethodsVisible(page, ['SPREEDLY', 'PAYPAL']);
+13:17:35
+13:17:35        at /tmp/build/6f6ae559/project/playwright/tests/paypal.spec.ts:28:50
+13:17:35
+13:17:35    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+13:17:35
+13:17:35    Test timeout of 60000ms exceeded.
+13:17:35
+13:17:35    Error: locator.click: Test timeout of 60000ms exceeded.
+13:17:35    Call log:
+13:17:35      - waiting for getByTestId('sign-up-form__submit')
+13:17:35      -   locator resolved to <button disabled type="submit" data-tracking="true" data…>Create Account</button>
+13:17:35      - attempting click action
+13:17:35      -   waiting for element to be visible, enabled and stable
+13:17:35      -     element is not enabled - waiting...
+13:17:35
+13:17:35
+13:17:35      26 |
+13:17:35      27 |   // Submit form
+13:17:35    > 28 |   await page.getByTestId('sign-up-form__submit').click();
+13:17:35         |                                                  ^
+13:17:35      29 |
+13:17:35      30 |   // Check payment methods
+13:17:35      31 |   await assertPaymentMethodsVisible(page, ['SPREEDLY', 'PAYPAL']);
+13:17:35
+13:17:35        at /tmp/build/6f6ae559/project/playwright/tests/paypal.spec.ts:28:50
+13:17:35
+13:17:35    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+13:17:35    test-results/paypal-Successful-Sign-Up-with-Paypal-Adyen-ending-up-on-the-success-page-peacock-skyshowtime--nbcu-nbcuott-us-retry1/trace.zip
+13:17:35    Usage:
+13:17:35
+13:17:35        yarn playwright show-trace test-results/paypal-Successful-Sign-Up-with-Paypal-Adyen-ending-up-on-the-success-page-peacock-skyshowtime--nbcu-nbcuott-us-retry1/trace.zip
+13:17:35
+13:17:35    ────────────────────────────────────────────────────────────────────────────────────────────────
+13:17:35
+13:17:35    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+13:17:35
+13:17:35    Test timeout of 60000ms exceeded.
+13:17:35
+13:17:35    Error: locator.click: Test timeout of 60000ms exceeded.
+13:17:35    Call log:
+13:17:35      - waiting for getByTestId('sign-up-form__submit')
+13:17:35      -   locator resolved to <button disabled type="submit" data-tracking="true" data…>Create Account</button>
+13:17:35      - attempting click action
+13:17:35      -   waiting for element to be visible, enabled and stable
+13:17:35      -     element is not enabled - waiting...
+13:17:35
+13:17:35
+13:17:35      26 |
+13:17:35      27 |   // Submit form
+13:17:35    > 28 |   await page.getByTestId('sign-up-form__submit').click();
+13:17:35         |                                                  ^
+13:17:35      29 |
+13:17:35      30 |   // Check payment methods
+13:17:35      31 |   await assertPaymentMethodsVisible(page, ['SPREEDLY', 'PAYPAL']);
+13:17:35
+13:17:35        at /tmp/build/6f6ae559/project/playwright/tests/paypal.spec.ts:28:50
+13:17:35
+13:17:35  1 failed
+13:17:35    [nbcu.nbcuott.us] › paypal.spec.ts:46:5 › Successful Sign Up with Paypal Direct ending up on the success page [@peacock, @skyshowtime] 
+13:17:35  1 flaky
+13:17:35    [nbcu.nbcuott.us] › paypal.spec.ts:13:5 › Successful Sign Up with Paypal (Adyen) ending up on the success page [@peacock, @skyshowtime] 
+13:17:35error Command failed with exit code 1.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+13:17:35info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.                                                                                                                                                                                                                                                                                                                                                                                                                               
+13:17:35Shutdown
+13:17:35
