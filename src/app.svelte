@@ -54,36 +54,38 @@
   }));
 </script>
 
-<Loading />
-<Nav title={data.step} ppt={data.ppt} on:click={check} />
-<div class="bg-base-100 p-3 rounded-md flex flex-col w-[650px] min-h-[200px]">
-  {#if data.step && data.tasks.length}
-    <Tabs {headers} let:active={activeTab}>
-      <div class="space-y-5">
-        {#if isCypressStep(data.step)}
-          <CypressTable data={data.tasks[activeTab]} />
-          <CypressScreenshots data={data.tasks[activeTab].webStaticUploads} />
-        {/if}
-        <Links data={data.tasks[activeTab]} />
+<div class="dark">
+  <Loading />
+  <Nav title={data.step} ppt={data.ppt} on:click={check} />
+  <div class="bg-base-100 p-3 rounded-md flex flex-col w-[650px] min-h-[200px]">
+    {#if data.step && data.tasks.length}
+      <Tabs {headers} let:active={activeTab}>
+        <div class="space-y-5">
+          {#if isCypressStep(data.step)}
+            <CypressTable data={data.tasks[activeTab]} />
+            <CypressScreenshots data={data.tasks[activeTab].webStaticUploads} />
+          {/if}
+          <Links data={data.tasks[activeTab]} />
+        </div>
+      </Tabs>
+    {:else if error}
+      <div role="alert" class="alert alert-error mb-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="stroke-current shrink-0 h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+          /></svg
+        >
+        <span>{error.message}</span>
       </div>
-    </Tabs>
-  {:else if error}
-    <div role="alert" class="alert alert-error mb-4">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="stroke-current shrink-0 h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        ><path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-        /></svg
-      >
-      <span>{error.message}</span>
-    </div>
-  {:else if !$loadingStore}
-    <p class="text-lg">No step data found.</p>
-  {/if}
+    {:else if !$loadingStore}
+      <p class="text-lg">No step data found.</p>
+    {/if}
+  </div>
 </div>

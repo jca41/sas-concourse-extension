@@ -12,6 +12,9 @@
         <polygon id="path-5"
             points="0.810567343 1.26756015 15.838445 1.26756015 15.838445 26.1616177 0.810567343 26.1616177"></polygon>
     </defs>
+
+    <rect fill="#4a90e2" width="100%" height="100%" />
+
     <g id="concourse_logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Group" transform="translate(6.000000, 6.000000)">
             <path

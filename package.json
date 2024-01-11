@@ -1,6 +1,6 @@
 {
   "name": "sas-concourse-extension",
-  "description": "Boilerplate for Chrome Extension Svelte Typescript project",
+  "description": "SAS concourse extension",
   "version": "1.0.0",
   "type": "module",
   "repository": {
