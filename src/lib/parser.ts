@@ -118,7 +118,10 @@ function detectCypressScreenshotDevice(url: string) {
 
 export function parseCypressScreenshots(urls: string[]) {
   const sections = urls.reduce((acc, url) => {
-    if (!url.includes("/cypress/screenshots")) {
+    if (
+      !url.includes("/cypress/screenshots") &&
+      !url.includes("/cypress/snapshots")
+    ) {
       return acc;
     }
 
