@@ -1,7 +1,6 @@
 <script lang="ts">
   import { scrollToTimestamp, type TaskData } from "../lib/html";
   import { isOOM, parseCypressTasks, type ResultsTable } from "../lib/parser";
-  import CypressScreenshots from "./cypress-screenshots.svelte";
 
   export let data: TaskData[number];
 

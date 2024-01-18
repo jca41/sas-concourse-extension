@@ -3,6 +3,7 @@
   import { getPlaywrightUrl, getSorryCypressUrl } from "../lib/parser";
   import SorryCypressIcon from "../assets/sorry-cypress.svg";
   import PlaywrightIcon from "../assets/playwright-logo.svg";
+  import { TITLE_CL } from "../style-classes";
 
   export let data: TaskData[number];
 
@@ -38,7 +39,7 @@
 
 {#if links.length}
   <div>
-    <h2 class="mb-4 text-xl font-semibold">Links</h2>
+    <h2 class={TITLE_CL}>Links</h2>
     <div class="flex gap-1">
       {#each links as link}
         <a href={link.href} target="_blank" class="btn btn-sm"

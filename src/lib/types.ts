@@ -1,1 +1,5 @@
-export type BuildStep = "functionals" | "visual-regression" | "e2e";
+export type BuildStep =
+  | "functionals"
+  | "visual-regression"
+  | "e2e"
+  | "deployment";

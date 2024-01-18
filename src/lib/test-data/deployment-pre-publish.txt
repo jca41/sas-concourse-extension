@@ -1,0 +1,62 @@
+09:43:27selected worker: worker-CZ204802V7-f850-c2s5-248-48
+09:43:33Task: Pre-Release
+09:43:33Set npm token
+09:43:33+ echo 'Set yarn to use npm registry'
+09:43:33Set yarn to use npm registry
+09:43:33+ yarn config set registry https://registry.npmjs.org
+09:43:33yarn config v1.22.19                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+09:43:33success Set "registry" to "https://registry.npmjs.org".                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+09:43:33Done in 0.03s.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+09:43:33+ echo 'Clone project'
+09:43:33Clone project
+09:43:33+ cp -r -T project project-modified
+09:43:42+ echo 'Moving to project-modified'
+09:43:42Moving to project-modified
+09:43:42+ cd project-modified
+09:43:42++ git log -n 1 --format=%B
+09:43:42++ grep -Eo -m 1 '\.*\[publish\]'
+09:43:42+ '[' -z '[publish]' ']'
+09:43:42++ cat version.txt
+09:43:42+ GIT_HASH=c43ee8a
+09:43:42++ cat release.txt
+09:43:42+ BRANCH=remove-federated-shell
+09:43:42+ echo 'Clear dist folder if it exists'
+09:43:42Clear dist folder if it exists
+09:43:42+ rm -rf dist
+09:43:42+ '[' true = true ']'
+09:43:42+ echo 'Building TypeScript'
+09:43:42Building TypeScript
+09:43:42+ yarn ts:build
+09:43:42yarn run v1.22.19                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+09:43:42$ yarn ts:clean && tsc && yarn ts:assets                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+09:43:43$ rm -rf ./lib                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+09:44:02$ copyfiles -u 1 "src/**/*.scss" "src/images/**/*.*" -e "src/test-harness/**/*.*" lib/                                                                                                                                                                                                                                                                                                                                                                                                                             
+09:44:02Done in 17.51s.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+09:44:02+ '[' false = true ']'
+09:44:02+ echo 'Releasing using Yarn'
+09:44:02Releasing using Yarn
+09:44:02+ git status
+09:44:02On branch remove-federated-shell
+09:44:02Untracked files:
+09:44:02  (use "git add <file>..." to include in what will be committed)
+09:44:02	release.txt
+09:44:02	time.txt
+09:44:02	version.txt
+09:44:02
+09:44:02nothing added to commit but untracked files present (use "git add" to track)
+09:44:02+ yarn version --no-git-tag-version --prerelease --preid cci-c43ee8a
+09:44:02yarn version v1.22.19                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+09:44:02info Current version: 67.2.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+09:44:02info New version: 67.2.1-cci-c43ee8a.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+09:44:02Done in 0.04s.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+09:44:02+ yarn publish --non-interactive --tag remove-federated-shell
+09:44:02yarn publish v1.22.19                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+09:44:02[1/4] Bumping version...                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+09:44:02info Current version: 67.2.1-cci-c43ee8a.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+09:44:02[2/4] Logging in...                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+09:44:02[3/4] Publishing...                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+09:44:20success Published.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+09:44:27[4/4] Revoking token...                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+09:44:27info Not revoking login token, specified via config file.                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+09:44:27Done in 19.91s.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+09:44:27

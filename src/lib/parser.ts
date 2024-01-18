@@ -150,3 +150,11 @@ export function parseCypressScreenshots(urls: string[]) {
 
   return Object.entries(sections);
 }
+
+export function detectPreRelease(rows: string[]) {
+  const releaseRegex = /info New version: (\S+)/;
+
+  const foundIndex = rows.findIndex((r) => releaseRegex.test(r));
+
+  return foundIndex !== -1 ? rows[foundIndex].match(releaseRegex)?.[1] : null;
+}

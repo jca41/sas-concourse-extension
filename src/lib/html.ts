@@ -34,7 +34,11 @@ export async function identityBuildStep(): Promise<BuildStep | null> {
       return null;
     }
 
-    const STATIC_STEPS: BuildStep[] = ["functionals", "visual-regression"];
+    const STATIC_STEPS: BuildStep[] = [
+      "functionals",
+      "visual-regression",
+      "deployment",
+    ];
 
     if (STATIC_STEPS.includes(stepName as BuildStep)) {
       return stepName as BuildStep;
@@ -66,6 +70,7 @@ export async function getTasksByType(type: BuildStep) {
   const STATIC_TYPE_TO_STEP: Partial<Record<BuildStep, string>> = {
     functionals: "functional",
     e2e: "e2e-tests",
+    deployment: "npm-publish-prerelease",
   };
 
   let stepKey = STATIC_TYPE_TO_STEP?.[type] ?? type;
