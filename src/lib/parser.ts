@@ -151,10 +151,17 @@ export function parseCypressScreenshots(urls: string[]) {
   return Object.entries(sections);
 }
 
-export function detectPreRelease(rows: string[]) {
-  const releaseRegex = /info New version: (\S+)/;
+export function detectRelease(rows: string[]) {
+  const preReleaseRegex = /info New version: (\S+)/;
+  const releaseRegex = /info Current version: (\S+)/;
 
-  const foundIndex = rows.findIndex((r) => releaseRegex.test(r));
+  const extractVersionByRegex = (regex: RegExp) => {
+    const foundIndex = rows.findIndex((r) => regex.test(r));
+    return foundIndex !== -1 ? rows[foundIndex].match(regex)?.[1] : null;
+  };
 
-  return foundIndex !== -1 ? rows[foundIndex].match(releaseRegex)?.[1] : null;
+  return (
+    extractVersionByRegex(preReleaseRegex) ||
+    extractVersionByRegex(releaseRegex)
+  );
 }
