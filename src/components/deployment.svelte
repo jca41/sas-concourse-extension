@@ -1,9 +1,9 @@
 <script lang="ts">
   import type { TaskData } from "../lib/html";
-  import { detectPreRelease } from "../lib/parser";
+  import { detectRelease } from "../lib/parser";
 
   export let data: TaskData[number];
-  $: version = detectPreRelease(data.body);
+  $: version = detectRelease(data.body);
   let tooltipOpen = false;
 
   async function copy() {

@@ -67,23 +67,28 @@ export async function identityPPT(): Promise<PPT | null> {
 }
 
 export async function getTasksByType(type: BuildStep) {
-  const STATIC_TYPE_TO_STEP: Partial<Record<BuildStep, string>> = {
+  const STATIC_TYPE_TO_STEP: Partial<Record<BuildStep, string | string[]>> = {
     functionals: "functional",
     e2e: "e2e-tests",
-    deployment: "npm-publish-prerelease",
+    deployment: ["npm-publish-prerelease", "publish-to-npm"],
   };
 
   let stepKey = STATIC_TYPE_TO_STEP?.[type] ?? type;
 
-  const data = await executeScript(async (_type: string) => {
-    const els = document.querySelectorAll<HTMLDivElement>(
-      `[data-step-name|="${_type}"]`
-    );
+  const data = await executeScript(async (_type: string | string[]) => {
+    const els = ([] as string[])
+      .concat(_type)
+      .reduce<HTMLDivElement[]>((acc, curr) => {
+        const stepEls = document.querySelectorAll<HTMLDivElement>(
+          `[data-step-name|="${curr}"]`
+        );
+        return [...acc, ...Array.from(stepEls)];
+      }, []);
 
     if (!els.length) return [];
 
     return Promise.all(
-      Array.from(els).map(async (el) => {
+      els.map(async (el) => {
         if (!el.querySelector(".step-body")) {
           el.querySelector<HTMLButtonElement>(".header")?.click?.();
         }

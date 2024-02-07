@@ -16,7 +16,7 @@
   import type { BuildStep } from "./lib/types";
   import Links from "./components/links.svelte";
   import CypressScreenshots from "./components/cypress-screenshots.svelte";
-  import PreRelease from "./components/pre-release.svelte";
+  import Deployment from "./components/deployment.svelte";
 
   let data: { step: BuildStep | null; tasks: TaskData; ppt: PPT | null } = {
     step: null,
@@ -67,7 +67,7 @@
             <CypressScreenshots data={data.tasks[activeTab].webStaticUploads} />
           {/if}
           {#if data.step === "deployment"}
-            <PreRelease data={data.tasks[activeTab]} />
+            <Deployment data={data.tasks[activeTab]} />
           {/if}
           <Links data={data.tasks[activeTab]} />
         </div>
