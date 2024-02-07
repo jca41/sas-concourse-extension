@@ -48,6 +48,12 @@ export async function identityBuildStep(): Promise<BuildStep | null> {
       return "e2e";
     }
 
+    if (
+      stepName.endsWith("-deploy-canary") ||
+      stepName.endsWith("-deploy-prod")
+    ) {
+      return "deployment";
+    }
     return null;
   });
 }
@@ -70,7 +76,11 @@ export async function getTasksByType(type: BuildStep) {
   const STATIC_TYPE_TO_STEP: Partial<Record<BuildStep, string | string[]>> = {
     functionals: "functional",
     e2e: "e2e-tests",
-    deployment: ["npm-publish-prerelease", "publish-to-npm"],
+    deployment: [
+      "npm-publish-prerelease",
+      "publish-to-npm",
+      "raise-spark-request",
+    ],
   };
 
   let stepKey = STATIC_TYPE_TO_STEP?.[type] ?? type;

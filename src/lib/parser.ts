@@ -151,7 +151,7 @@ export function parseCypressScreenshots(urls: string[]) {
   return Object.entries(sections);
 }
 
-export function detectRelease(rows: string[]) {
+export function detectNpmRelease(rows: string[]) {
   const preReleaseRegex = /info New version: (\S+)/;
   const releaseRegex = /info Current version: (\S+)/;
 
@@ -162,6 +162,17 @@ export function detectRelease(rows: string[]) {
 
   return (
     extractVersionByRegex(preReleaseRegex) ||
-    extractVersionByRegex(releaseRegex)
+    extractVersionByRegex(releaseRegex) ||
+    null
   );
+}
+
+export function detectSparkRequest(rows: string[]) {
+  const changeRequestRegex =
+    /checking status of CR ([A-Z0-9]+)\. Current status: Awaiting Approval\./;
+
+  const foundIndex = rows.findIndex((r) => changeRequestRegex.test(r));
+  return foundIndex !== -1
+    ? rows[foundIndex].match(changeRequestRegex)?.[1] ?? null
+    : null;
 }
